@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish for Healthcare · Capítulo 6 · En el consultorio: roles, admisión, procedimientos y direcciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* SPANISH FOR HEALTHCARE WORKERS · CAPÍTULO 6 · AT THE DOCTOR'S OFFICE & DIRECTIONS */
+:root{
+  --navy:#1B2E4F; --navy-light:#2E4977;
+  --terracotta:#C45D3A; --terracotta-light:#E0876A;
+  --gold:#D4A24C; --gold-light:#EBC373;
+  --sage:#6E8C5F; --sage-light:#9CB590;
+  --cream:#FBF7EE; --cream-dark:#F0E9D8;
+  --text:#1a1a1a; --text-light:#444; --text-hint:#666;
+  --soft-shadow:0 4px 16px rgba(27,46,79,0.08);
+  --tile-shadow:0 2px 8px rgba(27,46,79,0.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.55;font-size:16px;min-height:100vh;}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:9999;text-decoration:none;}
+.skip-link:focus{left:8px;top:8px;}
+*:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;}
+.app{max-width:1200px;margin:0 auto;padding:0 20px 64px;position:relative;}
+.app::before{content:'4';position:fixed;top:18px;right:24px;z-index:0;font-family:'Playfair Display',serif;font-size:9rem;font-weight:800;color:var(--navy);opacity:0.04;pointer-events:none;line-height:1;}
+
+.chap-head{margin-top:36px;padding:32px 36px;border-radius:18px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.chap-head::after{content:'';position:absolute;right:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(212,162,76,0.25),transparent 70%);}
+.header-badge{display:inline-block;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:rgba(212,162,76,0.22);color:var(--gold-light);padding:5px 12px;border-radius:20px;margin-bottom:10px;}
+.header-title{display:block;font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1.15;margin-bottom:6px;}
+.header-subtitle{display:block;font-family:'Space Mono',monospace;font-size:0.85rem;letter-spacing:0.1em;color:var(--gold-light);text-transform:uppercase;}
+
+.prog-bar{height:8px;background:var(--cream-dark);border-radius:4px;margin:6px 0 0;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--terracotta),var(--gold));width:0%;transition:width 0.6s ease-out;}
+.completion-wrap{margin:22px 0 20px;}
+.completion-top{display:flex;align-items:center;gap:12px;}
+.completion-label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-hint);}
+.completion-score{margin-left:auto;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;letter-spacing:0.04em;color:var(--sage);background:rgba(110,140,95,0.14);padding:4px 12px;border-radius:20px;white-space:nowrap;}
+.completion-pct{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--terracotta);margin-left:14px;}
+.completion-legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.legend-pill{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.04em;padding:4px 10px;border-radius:20px;background:var(--cream-dark);color:var(--text-light);border:1px solid transparent;cursor:pointer;transition:all 0.2s;}
+.legend-pill:hover{background:#e6d9c2;color:var(--navy);}
+.legend-pill.done{background:rgba(110,140,95,0.18);border-color:var(--sage);color:var(--sage);}
+
+.submit-bar{background:var(--cream-dark);border-radius:12px;padding:14px 18px;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.submit-bar label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);}
+#studentName{flex:1;min-width:210px;border:2px solid #e2d5bd;border-radius:8px;background:#fff;padding:9px 13px;font-family:inherit;font-size:0.94rem;color:var(--navy);}
+#studentName:focus{outline:none;border-color:var(--gold);}
+.btn-download{background:var(--terracotta);color:#fff;border:none;border-radius:8px;padding:10px 20px;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;transition:background 0.2s,transform 0.2s;}
+.btn-download:hover{background:var(--terracotta-light);transform:translateY(-1px);}
+.submit-hint{width:100%;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);letter-spacing:0.04em;}
+
+.quiz-item{background:var(--cream);border-radius:12px;padding:16px 18px;margin-bottom:14px;border-left:4px solid var(--sage);}
+.quiz-item.correct{background:#eef6ea;border-left-color:var(--sage);}
+.quiz-item.wrong{background:#fbeceb;border-left-color:var(--terracotta);}
+.quiz-q{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.quiz-q .qnum{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-hint);font-weight:400;margin-right:6px;}
+.quiz-gloss{font-size:0.8rem;color:var(--text-hint);font-style:italic;margin-bottom:12px;}
+.quiz-options{display:grid;gap:7px;}
+.quiz-opt{display:flex;align-items:flex-start;gap:10px;background:#fff;border:2px solid var(--cream-dark);border-radius:9px;padding:9px 13px;font-size:0.88rem;cursor:pointer;text-align:left;font-family:inherit;color:var(--text);width:100%;transition:border-color 0.2s,background 0.2s;}
+.quiz-opt:hover{border-color:var(--sage-light);background:#fbfaf6;}
+.quiz-opt.selected{border-color:var(--navy);background:#f3f5fa;}
+.quiz-opt.is-correct{border-color:var(--sage);background:#eef6ea;}
+.quiz-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;}
+.quiz-opt .letter{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);flex-shrink:0;margin-top:2px;}
+.quiz-explain{font-size:0.84rem;margin-top:10px;padding:10px 13px;border-radius:8px;background:#fff;border-left:3px solid var(--gold);display:none;}
+.quiz-explain.show{display:block;}
+
+.task-input{width:100%;border:none;border-bottom:2px solid var(--cream-dark);background:transparent;font-family:inherit;font-size:0.92rem;color:var(--navy);padding:5px 6px;}
+.task-input:focus{outline:none;border-bottom-color:var(--gold);}
+.task-fb{font-family:'Space Mono',monospace;font-size:0.66rem;margin-top:6px;display:none;}
+.task-fb.show{display:block;}
+.task-fb.ok{color:var(--sage);}
+.task-fb.ng{color:var(--terracotta);}
+
+.nav{display:flex;gap:4px;flex-wrap:wrap;background:#fff;padding:6px;border-radius:14px;box-shadow:var(--tile-shadow);margin-bottom:24px;}
+.tab{flex:1 1 auto;min-width:110px;padding:12px 14px;background:transparent;border:none;border-radius:10px;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;font-weight:600;color:var(--text-light);cursor:pointer;transition:all 0.18s ease;min-height:44px;}
+.tab:hover{background:var(--cream-dark);color:var(--navy);}
+.tab.active{background:var(--navy);color:#fff;box-shadow:0 2px 6px rgba(27,46,79,0.25);}
+
+.sec{display:none;animation:fadein 0.3s ease;}
+.sec.active{display:block;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.sec-sub{font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.12em;color:var(--terracotta);text-transform:uppercase;margin-bottom:22px;}
+
+.week-hero{background:#fff;padding:26px 30px;border-radius:14px;margin-bottom:24px;box-shadow:var(--tile-shadow);border-left:5px solid var(--terracotta);}
+.week-hero h1{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--navy);margin-bottom:8px;}
+.week-hero p{font-size:0.97rem;color:var(--text-light);margin-bottom:14px;}
+.topic-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{display:inline-block;padding:5px 11px;background:var(--cream-dark);color:var(--navy);border-radius:14px;font-size:0.78rem;font-weight:600;font-family:'Space Mono',monospace;letter-spacing:0.02em;}
+
+.ch-intro{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.ch-intro::before{content:'';position:absolute;left:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(196,93,58,0.25),transparent 70%);}
+.ch-intro .label{position:relative;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.ch-intro h2{position:relative;font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:10px;color:#fff;}
+.ch-intro p{position:relative;font-size:0.95rem;line-height:1.6;color:rgba(255,255,255,0.95);}
+
+.card{background:#fff;padding:22px 26px;border-radius:14px;margin-bottom:18px;box-shadow:var(--tile-shadow);}
+.card-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.card-title .pill{font-family:'Space Mono',monospace;font-size:0.65rem;background:var(--gold);color:#fff;padding:3px 9px;border-radius:12px;letter-spacing:0.1em;}
+
+.obj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+.obj{background:var(--cream);padding:14px 16px;border-radius:10px;border-left:3px solid var(--sage);display:flex;gap:11px;align-items:flex-start;}
+.obj-num{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;}
+.obj-text{font-size:0.93rem;color:var(--text);line-height:1.45;}
+
+.vocab-hint{text-align:center;font-size:0.82rem;color:var(--text-hint);font-style:italic;margin-bottom:14px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;}
+.vocab-card{perspective:1000px;height:118px;cursor:pointer;}
+.vocab-card-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+.vocab-card.flipped .vocab-card-inner{transform:rotateY(180deg);}
+.vocab-front,.vocab-back{position:absolute;width:100%;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;border-radius:11px;text-align:center;box-shadow:var(--tile-shadow);}
+.vocab-front{background:#fff;border:2px solid var(--cream-dark);font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);font-size:0.98rem;}
+.vocab-front small{display:block;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);font-weight:400;margin-top:5px;letter-spacing:0.04em;}
+.vocab-back{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-light));color:#fff;transform:rotateY(180deg);font-size:0.92rem;font-weight:600;}
+.vocab-ex{display:block;font-size:0.74rem;font-weight:400;font-style:italic;margin-top:6px;opacity:0.92;padding:0 18px;}
+.vocab-sound{position:absolute;top:6px;right:9px;font-size:0.75rem;opacity:0.55;}
+.vocab-replay{position:absolute;bottom:6px;right:8px;background:rgba(255,255,255,0.22);border:none;border-radius:50%;width:30px;height:30px;font-size:0.85rem;cursor:pointer;color:#fff;line-height:30px;padding:0;}
+.vocab-replay:hover,.vocab-replay:focus-visible{background:rgba(255,255,255,0.4);outline:2px solid #fff;}
+.vocab-card:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:12px;}
+.vocab-card.conn-card .vocab-front{border-color:var(--sage-light);color:var(--sage);}
+.vocab-card.conn-card .vocab-back{background:linear-gradient(135deg,var(--sage),#5A7350);}
+
+.gbox{background:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--tile-shadow);border-top:4px solid var(--terracotta);}
+.gbox.alt{border-top-color:var(--sage);}
+.gbox.alt2{border-top-color:var(--gold);}
+.gbox h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.gbox h3 .num{font-family:'Space Mono',monospace;font-size:0.7rem;background:var(--terracotta);color:#fff;padding:4px 10px;border-radius:11px;letter-spacing:0.1em;}
+.gbox.alt h3 .num{background:var(--sage);}
+.gbox.alt2 h3 .num{background:var(--gold);color:var(--navy);}
+.gbox .sub{font-size:0.9rem;color:var(--text-hint);margin-bottom:16px;font-style:italic;}
+
+.conj-table{width:100%;border-collapse:collapse;margin:14px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(27,46,79,0.05);}
+.conj-table th,.conj-table td{padding:9px 13px;text-align:left;font-size:0.9rem;border-bottom:1px solid var(--cream-dark);}
+.conj-table th{background:var(--navy);color:#fff;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;}
+.conj-table td .pn{color:var(--text-hint);}
+.conj-table td .fm{color:var(--terracotta);font-weight:700;font-style:italic;}
+.conj-table .accent{color:var(--terracotta);font-weight:700;}
+.conj-table tr:last-child td{border-bottom:none;}
+
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:740px){.three-col{grid-template-columns:1fr;}}
+.col-card{background:var(--cream);padding:16px 18px;border-radius:10px;border-top:4px solid var(--terracotta);}
+.col-card.gd{border-top-color:var(--gold);}
+.col-card.sg{border-top-color:var(--sage);}
+.col-card h4{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--navy);margin-bottom:4px;}
+.col-card .meaning{font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--text-hint);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px;}
+.col-card .ex{font-style:italic;font-size:0.85rem;color:var(--text);background:#fff;padding:7px 10px;border-radius:6px;margin-bottom:5px;}
+.col-card .ex strong{color:var(--terracotta);font-style:normal;}
+.col-card.gd .ex strong{color:#A07A2D;}
+.col-card.sg .ex strong{color:var(--sage);}
+
+.ex-box{background:var(--cream);border-left:3px solid var(--sage);padding:12px 16px;border-radius:8px;margin:14px 0;}
+.ex-box p{font-size:0.9rem;color:var(--text);margin:4px 0;}
+.ex-box em{color:var(--text-hint);font-style:italic;}
+.ojo{background:#FFF6F0;border-left:4px solid var(--terracotta);padding:14px 18px;border-radius:8px;margin:16px 0;}
+.ojo-title{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--terracotta);letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:6px;}
+.ojo p{font-size:0.92rem;color:var(--text);line-height:1.55;}
+.ojo em{color:var(--terracotta);font-style:italic;font-weight:600;}
+
+/* Alphabet grid */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin:14px 0;}
+.alpha-cell{background:var(--cream);border-radius:8px;padding:9px 6px;text-align:center;border:1px solid var(--cream-dark);}
+.alpha-cell .ltr{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);display:block;}
+.alpha-cell .nm{font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--terracotta);letter-spacing:0.04em;display:block;margin-top:2px;}
+.vowel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0;}
+.vowel-cell{background:linear-gradient(135deg,var(--navy),var(--navy-light));color:#fff;border-radius:10px;padding:14px 10px;text-align:center;}
+.vowel-cell .v{font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;display:block;line-height:1;}
+.vowel-cell .s{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--gold-light);display:block;margin-top:6px;letter-spacing:0.06em;}
+.vowel-cell .w{font-size:0.8rem;color:rgba(255,255,255,0.9);display:block;margin-top:4px;font-style:italic;}
+
+.ex-item{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--cream-dark);font-size:0.97rem;}
+.ex-item:last-of-type{border-bottom:none;}
+.ex-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--cream);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;}
+.ex-text{flex:1;line-height:1.9;color:var(--text);}
+.ex-hint{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--terracotta);margin-left:4px;}
+.blk{display:inline-block;width:120px;padding:6px 10px;border:2px solid var(--cream-dark);border-radius:6px;font-family:'Source Sans 3',sans-serif;font-size:0.95rem;color:var(--navy);background:#fff;outline:none;transition:border-color 0.15s;}
+.blk.wide{width:170px;}
+.blk:focus{border-color:var(--gold);}
+.blk.ok{border-color:var(--sage);background:#F4F8F0;color:#3F5C32;}
+.blk.ng{border-color:var(--terracotta);background:#FFF0EA;color:#8E3A1F;}
+
+.chk-btn,.rst-btn,.toggle-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:none;border-radius:8px;font-family:'Source Sans 3',sans-serif;font-size:0.92rem;font-weight:700;cursor:pointer;transition:all 0.15s;min-height:42px;margin-top:14px;}
+.chk-btn{background:var(--navy);color:#fff;}
+.chk-btn:hover{background:var(--navy-light);}
+.rst-btn{background:#fff;color:var(--navy);border:2px solid var(--cream-dark);margin-left:6px;}
+.rst-btn:hover{border-color:var(--navy);}
+.toggle-btn{background:var(--gold);color:var(--navy);margin-left:6px;}
+.toggle-btn:hover{background:var(--gold-light);}
+.res-msg{margin-top:12px;font-size:0.93rem;font-weight:700;min-height:22px;}
+.res-msg.ok{color:#3F5C32;}
+.res-msg.ng{color:#8E3A1F;}
+
+.word-bank{background:var(--cream);padding:11px 14px;border-radius:8px;margin-bottom:14px;font-size:0.88rem;}
+.word-bank-label{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:4px;}
+.word-bank-words span{display:inline-block;background:#fff;padding:3px 9px;border-radius:11px;margin:2px 3px;font-size:0.84rem;border:1px solid var(--cream-dark);color:var(--navy);font-weight:700;}
+
+/* Matching */
+.match-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.match-col-label{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-hint);margin-bottom:6px;}
+.mi{padding:11px 13px;border:2px solid var(--cream-dark);border-radius:9px;cursor:pointer;font-size:0.86rem;background:#fff;transition:all 0.12s;line-height:1.4;margin-bottom:7px;color:var(--text);}
+.mi:hover{border-color:var(--sage-light);}
+.mi.sel{border-color:var(--navy);background:#f3f5fa;color:var(--navy);}
+.mi.done{border-color:var(--sage);background:#eef6ea;color:#3F5C32;pointer-events:none;opacity:0.75;}
+.mi.bad{border-color:var(--terracotta);background:#fbeceb;}
+
+/* Conjugation game */
+.game-wrap{background:var(--cream);border-radius:14px;padding:22px;text-align:center;}
+.game-scorebar{display:flex;justify-content:center;gap:22px;margin-bottom:16px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-hint);}
+.game-scorebar b{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--terracotta);margin-top:2px;}
+.game-prompt{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy);margin:10px 0 4px;}
+.game-sub{font-size:0.85rem;color:var(--text-hint);font-style:italic;margin-bottom:18px;}
+.game-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:560px;margin:0 auto;}
+@media(max-width:520px){.game-opts{grid-template-columns:1fr;}}
+.game-opt{background:#fff;border:2px solid var(--cream-dark);border-radius:10px;padding:14px 10px;font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;transition:all 0.12s;}
+.game-opt:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+.game-opt.is-correct{border-color:var(--sage);background:#eef6ea;color:#3F5C32;}
+.game-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;color:#8E3A1F;}
+.game-feedback{min-height:22px;margin-top:14px;font-weight:700;font-size:0.95rem;}
+.game-feedback.ok{color:#3F5C32;}
+.game-feedback.ng{color:#8E3A1F;}
+.game-done{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);}
+
+.cult-card{background:linear-gradient(135deg,var(--sage) 0%,#5A7350 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:18px;box-shadow:var(--soft-shadow);}
+.cult-card .label{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.cult-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;color:#fff;}
+.cult-card p{font-size:0.95rem;line-height:1.65;color:rgba(255,255,255,0.95);}
+.cult-card .fact-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.cult-card .fact-pills span{background:rgba(255,255,255,0.18);padding:5px 11px;border-radius:14px;font-size:0.82rem;font-weight:600;}
+
+.footer{margin-top:36px;padding:20px;text-align:center;font-family:'Space Mono',monospace;font-size:0.76rem;color:var(--text-hint);letter-spacing:0.05em;}
+
+@media(max-width:600px){
+  .chap-head{padding:24px 22px;}
+  .header-title{font-size:1.7rem;}
+  .gbox,.card,.cult-card,.ch-intro{padding:18px 20px;}
+  .three-col{grid-template-columns:1fr;}
+  .ex-item{flex-wrap:wrap;}
+}
+
+/* ── Shared additions (dialogue, pod, formula) ── */
+.dlg{background:var(--cream);border-radius:10px;padding:14px 18px;margin:14px 0;}
+.dlg p{font-size:0.93rem;margin:6px 0;line-height:1.5;}
+.dlg .who{display:inline-block;min-width:92px;font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--terracotta);font-weight:700;}
+.dlg .who.pt{color:var(--sage);}
+.dlg .en{display:block;font-size:0.8rem;color:var(--text-hint);font-style:italic;margin-left:96px;}
+.pod-hero{background:linear-gradient(135deg,#9B2C2C 0%,#B84444 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.pod-hero::after{content:'🩹';position:absolute;right:22px;bottom:6px;font-size:4.5rem;opacity:0.22;}
+.pod-hero .label{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:6px;}
+.pod-hero h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:10px;color:#fff;}
+.pod-hero p{font-size:0.95rem;line-height:1.6;color:rgba(255,255,255,0.95);max-width:760px;}
+.vocab-card.pod-card .vocab-front{border-color:#E3B2B2;color:#9B2C2C;}
+.vocab-card.pod-card .vocab-back{background:linear-gradient(135deg,#9B2C2C,#B84444);}
+.tab.pod-tab{color:#9B2C2C;}
+.tab.pod-tab.active{background:#9B2C2C;color:#fff;}
+.formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0;font-size:0.95rem;}
+.formula span{background:var(--cream);border:1px solid var(--cream-dark);border-radius:8px;padding:6px 11px;font-weight:600;color:var(--navy);}
+.formula span.arrow{background:none;border:none;color:var(--terracotta);font-weight:700;padding:0 2px;}
+.formula span.res{background:var(--terracotta);border-color:var(--terracotta);color:#fff;}
+.tts-note{font-size:0.78rem;color:var(--text-hint);text-align:center;margin-top:-6px;margin-bottom:14px;}
+/* ── Capítulo 3 additions ── */
+.play-btn{display:inline-flex;align-items:center;gap:5px;background:var(--navy);color:#fff;border:none;border-radius:16px;padding:5px 12px;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.04em;cursor:pointer;margin-right:8px;vertical-align:middle;}
+.play-btn:hover{background:var(--navy-light);}
+.alpha-cell.num-cell{cursor:pointer;border:1px solid var(--cream-dark);font-family:inherit;transition:all 0.12s;}
+.alpha-cell.num-cell:hover{border-color:var(--gold);background:#fff;transform:translateY(-1px);}
+.alpha-cell.num-cell .nm{text-transform:none;}
+/* ── Capítulo 4 additions ── */
+.tab.rev-tab{color:var(--sage);}
+.tab.rev-tab.active{background:var(--sage);color:#fff;}
+.body-wrap{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:20px;align-items:start;margin:10px 0;}
+@media(max-width:700px){.body-wrap{grid-template-columns:1fr;}}
+.body-fig{background:var(--cream);border-radius:12px;padding:10px;}
+.body-fig svg{width:100%;height:auto;display:block;}
+.body-fig .bp{fill:#E9DCC4;stroke:#CDB896;stroke-width:2;}
+.body-fig .hs{cursor:pointer;}
+.body-fig .hs circle{fill:var(--terracotta);stroke:#fff;stroke-width:2;transition:fill 0.15s;}
+.body-fig .hs:hover circle,.body-fig .hs:focus circle,.body-fig .hs.on circle{fill:var(--navy);}
+.body-fig .hs text{fill:#fff;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;pointer-events:none;}
+.body-fig .hs:focus{outline:none;}
+.body-label{background:var(--navy);color:#fff;border-radius:12px;padding:16px 18px;margin-bottom:12px;display:flex;flex-direction:column;gap:2px;}
+.body-label .bl-num{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--gold-light);letter-spacing:0.1em;}
+.body-label .bl-word{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;}
+.body-label .bl-en{font-size:0.9rem;color:rgba(255,255,255,0.8);font-style:italic;}
+
+/* ═══ Capítulo 6 additions ═══ */
+.app::before{content:'6';}
+.tab.com-tab{color:#3F7C85;}
+.tab.com-tab.active{background:#3F7C85;color:#fff;}
+.pod-hero::after{content:'🩺';}
+.play-btn.mini{padding:2px 8px;font-size:0.62rem;margin:0 0 0 6px;}
+
+/* map */
+.map-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:680px;margin:0 auto;}
+@media(max-width:700px){.map-wrap{grid-template-columns:1fr;}}
+.map-floor{background:var(--cream);border-radius:12px;padding:10px;}
+.map-cap{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:6px;text-align:center;}
+.map-floor svg{width:100%;height:auto;display:block;}
+.map-floor .hall{fill:#E9DCC4;}
+.map-floor .room rect{fill:#fff;stroke:var(--navy);stroke-width:2;transition:fill 0.15s;}
+.map-floor .room{cursor:pointer;}
+.map-floor .room:hover rect,.map-floor .room:focus rect{fill:#FFF3D6;}
+.map-floor .room.on rect{fill:var(--gold-light);}
+.map-floor .room.ok rect{fill:#CFE3C6;}
+.map-floor .room.bad rect{fill:#F4C9BE;}
+.map-floor .room text{font-family:'Source Sans 3',sans-serif;font-size:12px;font-weight:700;fill:var(--navy);pointer-events:none;}
+.map-floor .room:focus{outline:none;}
+.map-floor .fixed rect{fill:var(--navy);stroke:var(--navy);}
+.map-floor .fixed text{fill:#fff;font-size:11px;font-weight:700;font-family:'Space Mono',monospace;}
+.map-floor .arrow-t{font-family:'Space Mono',monospace;font-size:10px;fill:#8a7a60;}
+.map-label{max-width:680px;margin:12px auto 0;background:var(--navy);color:#fff;border-radius:12px;padding:12px 18px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;}
+.map-label .ml-es{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;}
+.map-label .ml-en{font-size:0.92rem;color:rgba(255,255,255,0.8);font-style:italic;}
+.dir-box{background:var(--cream);border-radius:12px;padding:16px 18px;margin-bottom:12px;border-left:5px solid var(--gold);}
+.dir-top{display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-hint);letter-spacing:0.06em;margin-bottom:8px;}
+.dir-text{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--navy);line-height:1.4;margin-bottom:10px;}
+.dir-btns{margin-bottom:6px;}
+select.sel{font-family:inherit;font-size:0.92rem;padding:4px 8px;border:2px solid var(--cream-dark);border-radius:8px;background:#fff;color:var(--navy);font-weight:600;}
+select.sel.ok{border-color:var(--sage);background:#F2F8EE;}
+select.sel.ng{border-color:var(--terracotta);background:#FCF0EE;}
+
+/* ordering */
+.ord-ans{min-height:52px;background:var(--cream);border:2px dashed var(--cream-dark);border-radius:10px;padding:8px;margin:10px 0;counter-reset:st;}
+.ord-ans:empty::before{content:'Your order appears here…';color:var(--text-hint);font-size:0.85rem;font-style:italic;padding:6px;display:block;}
+.ord-pool{display:flex;flex-direction:column;gap:6px;}
+.ord-step{display:block;width:100%;text-align:left;background:#fff;border:2px solid var(--cream-dark);border-radius:9px;padding:9px 12px;font-family:inherit;font-size:0.92rem;color:var(--text);cursor:pointer;margin-bottom:6px;}
+.ord-step:hover{border-color:var(--gold);}
+.ord-ans .ord-step{counter-increment:st;}
+.ord-ans .ord-step::before{content:counter(st) '. ';font-weight:700;color:var(--terracotta);}
+.ord-ans .ord-step.ok{border-color:var(--sage);background:#F2F8EE;}
+.ord-ans .ord-step.ng{border-color:var(--terracotta);background:#FCF0EE;}
+
+/* intake form */
+.intake{border:2px solid var(--navy);border-radius:12px;overflow:hidden;margin:14px 0;}
+.intake-head{background:var(--navy);color:#fff;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;padding:10px 14px;}
+.intake-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;padding:14px;}
+@media(max-width:620px){.intake-grid{grid-template-columns:1fr;}}
+.intake-grid label{font-size:0.78rem;font-weight:700;color:var(--text-hint);text-transform:uppercase;letter-spacing:0.04em;display:flex;flex-direction:column;gap:3px;}
+.intake-grid .blk{width:100%;min-width:0;text-transform:none;font-size:0.95rem;}
+
+/* reading */
+.flyer{border:2px solid var(--sage);border-radius:14px;overflow:hidden;margin-bottom:12px;background:#fff;}
+.flyer-head{background:linear-gradient(135deg,var(--sage),#5A7350);color:#fff;padding:16px 20px;}
+.flyer-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;}
+.flyer-tag{font-size:0.9rem;opacity:0.95;}
+.flyer-body{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;padding:14px 20px;}
+@media(max-width:620px){.flyer-body{grid-template-columns:1fr;}}
+.flyer-col h4{font-family:'Space Mono',monospace;font-size:0.74rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--navy);margin:10px 0 4px;}
+.flyer-col p{font-size:0.94rem;line-height:1.55;}
+.flyer-foot{background:#FCF0EE;color:#8A3A22;font-weight:700;font-size:0.9rem;padding:10px 20px;border-top:1px solid #F0D2C8;}
+.article{background:#fff;border:1px solid var(--cream-dark);border-radius:12px;padding:18px 22px;margin-bottom:16px;}
+.article p{font-size:0.98rem;line-height:1.7;margin-bottom:12px;}
+.article .src{font-size:0.75rem;color:var(--text-hint);font-style:italic;margin:0;}
+.gl{border-bottom:2px dotted var(--terracotta);cursor:help;position:relative;}
+.gl.light{border-bottom-color:rgba(255,255,255,0.8);}
+.gl.on::after{content:attr(data-en);position:absolute;left:50%;bottom:125%;transform:translateX(-50%);background:var(--navy);color:#fff;font-size:0.78rem;font-style:italic;font-weight:600;white-space:nowrap;padding:4px 9px;border-radius:6px;z-index:5;box-shadow:var(--soft-shadow);}
+.real-note{font-size:0.84rem;color:var(--text-light);background:#EEF5F6;border-left:4px solid #3F7C85;padding:9px 13px;border-radius:6px;margin:8px 0 16px;}
+
+/* data bars */
+.bar-group{margin-bottom:16px;}
+.bar-title{font-weight:700;color:var(--navy);font-size:0.95rem;margin-bottom:6px;}
+.bar-row{display:grid;grid-template-columns:130px 1fr 56px;align-items:center;gap:10px;margin-bottom:5px;cursor:pointer;}
+.bar-row .lbl{font-size:0.84rem;color:var(--text-light);}
+.bar-track{background:var(--cream-dark);border-radius:6px;height:20px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:6px;width:0;transition:width 1s ease-out;}
+.bar-row .val{font-family:'Space Mono',monospace;font-weight:700;font-size:0.85rem;color:var(--navy);}
+.refl{margin-bottom:14px;}
+.refl label{display:block;font-weight:700;color:var(--navy);font-size:0.92rem;margin-bottom:6px;}
+.refl textarea{width:100%;border:2px solid var(--cream-dark);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:0.92rem;resize:vertical;}
+.refl textarea:focus{outline:none;border-color:var(--gold);}
+.src-list{padding-left:20px;font-size:0.9rem;line-height:1.8;}
+.src-list a{color:var(--navy);}
+
+/* sorting */
+.sort-pool{display:flex;flex-wrap:wrap;gap:8px;min-height:44px;background:var(--cream);border-radius:10px;padding:10px;margin-bottom:12px;}
+.sort-card{background:#fff;border:2px solid var(--cream-dark);border-radius:9px;padding:7px 11px;font-family:inherit;font-size:0.86rem;cursor:pointer;color:var(--text);text-align:left;}
+.sort-card.sel{border-color:var(--navy);background:#EEF2F9;box-shadow:0 0 0 2px rgba(27,46,79,0.15);}
+.sort-card.ok{border-color:var(--sage);background:#F2F8EE;}
+.sort-card.ng{border-color:var(--terracotta);background:#FCF0EE;}
+.sort-bins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px;}
+@media(max-width:700px){.sort-bins{grid-template-columns:1fr 1fr;}}
+.sort-bin{border:2px dashed var(--navy-light);border-radius:12px;padding:8px;min-height:90px;background:#fff;cursor:pointer;display:flex;flex-direction:column;gap:6px;}
+.sort-bin:hover{background:#FBF7EE;}
+.sort-bin h5{font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--terracotta);text-align:center;}
+
+/* sentence builder */
+.bld{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--cream-dark);}
+.bld-q{font-size:0.92rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.bld-q span{font-weight:400;color:var(--text-hint);font-style:italic;}
+.bld-ans{min-height:40px;background:var(--cream);border-radius:8px;padding:6px;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px;border:2px solid transparent;}
+.bld-ans.ok{border-color:var(--sage);background:#F2F8EE;}
+.bld-ans.ng{border-color:var(--terracotta);background:#FCF0EE;}
+.bld-pool{display:flex;flex-wrap:wrap;gap:6px;}
+.tile-w{background:#fff;border:2px solid var(--navy);color:var(--navy);border-radius:8px;padding:5px 10px;font-family:inherit;font-size:0.9rem;font-weight:600;cursor:pointer;}
+.bld-ans .tile-w{background:var(--navy);color:#fff;}
+.bld-fb{font-size:0.82rem;margin-top:4px;}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="app">
+
+  <div class="chap-head">
+    <span class="header-badge">SPSCC · SPANISH FOR HEALTHCARE</span>
+    <span class="header-title">Capítulo 6 · En el consultorio</span>
+    <span class="header-subtitle">At the Doctor's Office &amp; Directions</span>
+  </div>
+
+  <div class="completion-wrap">
+    <div class="completion-top">
+      <span class="completion-label">Mi progreso · My progress</span>
+      <span class="completion-score" id="completionScore">★ 0% correcto</span>
+      <span class="completion-pct" id="completionPct">0%</span>
+    </div>
+    <div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+    <div class="completion-legend" id="completionLegend"></div>
+  </div>
+
+  <div class="submit-bar">
+    <label for="studentName">Nombre / Name</label>
+    <input id="studentName" type="text" placeholder="Type your full name here" autocomplete="name">
+    <button class="btn-download" onclick="downloadReport()">⬇ Download Report</button>
+    <span class="submit-hint">Enter your name, work through every tab, then download your chapter report to turn in.</span>
+  </div>
+
+  <nav class="nav" aria-label="Chapter sections">
+    <button class="tab active" onclick="switchTab('ov',this)">Inicio</button>
+    <button class="tab" onclick="switchTab('vo',this)">Vocabulario</button>
+    <button class="tab" onclick="switchTab('gr',this)">Gramática</button>
+    <button class="tab" onclick="switchTab('mapa',this)">🗺 El mapa</button>
+    <button class="tab" onclick="switchTab('ej',this)">Ejercicios</button>
+    <button class="tab" onclick="switchTab('lec',this)">📖 Lectura</button>
+    <button class="tab com-tab" onclick="switchTab('com',this)">Comunidad</button>
+    <button class="tab" onclick="switchTab('ju',this)">Juegos</button>
+    <button class="tab pod-tab" onclick="switchTab('pod',this)">★ Pod · Cirugía</button>
+  </nav>
+
+  <div id="main-content"></div>
+
+  <!-- ═══ INICIO ═══ -->
+  <section class="sec active" id="sec-ov">
+    <h2 class="sec-title">Capítulo 6 · En el consultorio</h2>
+    <p class="sec-sub">roles y departamentos · preguntas de admisión · procedimientos · mandatos · direcciones · preposiciones</p>
+
+    <div class="ch-intro">
+      <div class="label">¡Bienvenidos! · Where do I go?</div>
+      <h2>From the front door to the exam room</h2>
+      <p>A patient walks into the clinic. Someone has to <strong>check them in</strong> (<em>¿Cuál es su fecha de nacimiento?</em>), <strong>explain what will happen</strong> (<em>Primero, la enfermera le va a tomar la presión</em>), give <strong>clear instructions</strong> (<em>Póngase la bata, por favor</em>) and tell them <strong>where to go</strong> (<em>Siga derecho y doble a la derecha. La farmacia está enfrente de la recepción</em>). This chapter gives you the words for every step. You'll also read about <strong>health access in Latino communities in the U.S.</strong>, with real data, and visit the operating room in this week's pod.</p>
+    </div>
+
+    <div class="week-hero">
+      <h1>What this chapter covers</h1>
+      <p>Six building blocks, an interactive clinic map, two readings, a community health section and the surgery pod. Everything is graded automatically.</p>
+      <div class="topic-chips">
+        <span class="chip">roles y departamentos</span>
+        <span class="chip">preguntas de admisión</span>
+        <span class="chip">explicar procedimientos</span>
+        <span class="chip">mandatos para el cuidado</span>
+        <span class="chip">siga · doble · suba · baje</span>
+        <span class="chip">al lado de · enfrente de · entre</span>
+        <span class="chip">📖 lectura · salud latina</span>
+        <span class="chip">★ pod: cirugía</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Objetivos · By the end of this chapter you can <span class="pill">CAP 6</span></div>
+      <div class="obj-grid">
+        <div class="obj"><span class="obj-num">1</span><span class="obj-text">Name <strong>medical roles and departments</strong>: <em>el médico, la enfermera, la recepción, la farmacia, radiología, urgencias</em>.</span></div>
+        <div class="obj"><span class="obj-num">2</span><span class="obj-text">Ask the <strong>intake questions</strong>: <em>¿Cuál es su fecha de nacimiento? ¿Tiene seguro médico? ¿Es alérgico a algún medicamento?</em></span></div>
+        <div class="obj"><span class="obj-num">3</span><span class="obj-text"><strong>Explain procedures and services</strong> with <em>voy a + infinitivo</em> and <em>primero, después, al final</em>.</span></div>
+        <div class="obj"><span class="obj-num">4</span><span class="obj-text">Give <strong>patient-care commands</strong>: <em>Quítese la camisa. Póngase la bata. Súbase a la camilla.</em></span></div>
+        <div class="obj"><span class="obj-num">5</span><span class="obj-text">Give <strong>step-by-step directions</strong> and use <strong>prepositions of place</strong>: <em>siga derecho, doble a la derecha, suba, al fondo, al lado de, enfrente de, entre</em>.</span></div>
+        <div class="obj"><span class="obj-num">★</span><span class="obj-text"><strong>Pod de especialidad:</strong> prepare a patient for surgery and read about medical tourism in Latin America.</span></div>
+      </div>
+    </div>
+
+    <div class="cult-card">
+      <div class="label">Nota cultural · One building, many words</div>
+      <h3>¿Ascensor o elevador? ¿Doble o voltee?</h3>
+      <p>Directions are where regional Spanish shows up fast. In Mexico and much of Central America people say <em>el elevador</em>; in Spain and many South American countries, <em>el ascensor</em>. To say "turn," you'll hear <em>doble</em>, <em>gire</em> and, very often in Mexico, <em>voltee</em>. The title <em>doctor / doctora</em> is used for physicians, but the profession is <em>médico / médica</em>. And be careful with one false friend on intake forms: <em>la dirección</em> means <strong>address</strong> as well as direction.</p>
+      <div class="fact-pills">
+        <span>el ascensor · el elevador</span>
+        <span>doble · gire · voltee</span>
+        <span>la dirección = address</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VOCABULARIO ═══ -->
+  <section class="sec" id="sec-vo">
+    <h2 class="sec-title">Vocabulario · Capítulo 6</h2>
+    <p class="sec-sub">roles y lugares · admisión · procedimientos y mandatos · direcciones</p>
+    <p class="vocab-hint">Tap any card to flip it: you'll see the translation and an example, and hear both 🔊. Say each word out loud before you flip it.</p>
+    <p class="tts-note">Audio uses your device's Spanish voice. If you hear nothing, check your volume or try another browser.</p>
+
+    <div class="card">
+      <div class="card-title">Roles y lugares <span class="pill">12 CARDS</span></div>
+      <div class="vocab-grid" id="fcRoles"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">La admisión · intake <span class="pill">12 CARDS</span></div>
+      <div class="vocab-grid" id="fcIntake"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Procedimientos y mandatos <span class="pill">12 CARDS</span></div>
+      <div class="vocab-grid" id="fcCare"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Direcciones y lugar <span class="pill">12 CARDS</span></div>
+      <div class="vocab-grid" id="fcDir"></div>
+    </div>
+  </section>
+
+  <!-- ═══ GRAMÁTICA ═══ -->
+  <section class="sec" id="sec-gr">
+    <h2 class="sec-title">Gramática · Capítulo 6</h2>
+    <p class="sec-sub">who, where, what happens next, and how to get there</p>
+
+    <div class="gbox">
+      <h3><span class="num">G1</span>Roles y departamentos</h3>
+      <p class="sub">¿Quién? (who) and ¿Adónde? (where to). Most roles change for gender: <em>el médico / la médica</em>. Words ending in <em>-ista</em> and <em>-nte</em> only change the article.</p>
+      <table class="conj-table">
+        <thead><tr><th>¿Quién?</th><th>¿Qué hace?</th><th>¿Dónde?</th></tr></thead>
+        <tbody>
+          <tr><td class="accent">el / la recepcionista</td><td>registra al paciente · checks the patient in</td><td>la recepción</td></tr>
+          <tr><td class="accent">el enfermero / la enfermera</td><td>le toma la presión · takes vital signs</td><td>el consultorio</td></tr>
+          <tr><td class="accent">el médico / la médica</td><td>examina al paciente · examines the patient</td><td>el consultorio</td></tr>
+          <tr><td class="accent">el técnico / la técnica</td><td>toma radiografías · takes X-rays</td><td>radiología</td></tr>
+          <tr><td class="accent">el farmacéutico / la farmacéutica</td><td>explica la medicina · explains the medicine</td><td>la farmacia</td></tr>
+          <tr><td class="accent">el / la intérprete</td><td>interpreta · interprets</td><td>en todas partes</td></tr>
+        </tbody>
+      </table>
+      <div class="formula"><span>a</span><span class="arrow">+</span><span>el</span><span class="arrow">=</span><span class="res">al</span><span>Vaya al laboratorio.</span><span>Vaya a la farmacia.</span><span>Vaya a urgencias.</span></div>
+    </div>
+
+    <div class="gbox alt">
+      <h3><span class="num">G2</span>Preguntas de admisión · intake</h3>
+      <p class="sub">For information on a form, Spanish asks <strong>¿Cuál es…?</strong>, not "¿Qué es…?". All of these use the usted form.</p>
+      <table class="conj-table">
+        <thead><tr><th>Pregunta</th><th>English</th><th>Respuesta modelo</th></tr></thead>
+        <tbody>
+          <tr><td class="accent">¿Cuál es su nombre completo?</td><td>What is your full name?</td><td>Rosa Elena Martínez Cruz.</td></tr>
+          <tr><td class="accent">¿Cuál es su fecha de nacimiento?</td><td>What is your date of birth?</td><td>El 12 de marzo de 1985.</td></tr>
+          <tr><td class="accent">¿Cuál es su dirección?</td><td>What is your address?</td><td>Calle Main, número 40.</td></tr>
+          <tr><td class="accent">¿Tiene seguro médico?</td><td>Do you have health insurance?</td><td>Sí, tengo Medicaid. / No, no tengo.</td></tr>
+          <tr><td class="accent">¿Toma algún medicamento?</td><td>Do you take any medication?</td><td>Sí, tomo metformina.</td></tr>
+          <tr><td class="accent">¿Es alérgico/a a algún medicamento?</td><td>Are you allergic to any medication?</td><td>Sí, a la penicilina.</td></tr>
+          <tr><td class="accent">¿Cuál es el motivo de su visita?</td><td>What is the reason for your visit?</td><td>Me duele la garganta.</td></tr>
+          <tr><td class="accent">¿Quién es su contacto de emergencia?</td><td>Who is your emergency contact?</td><td>Mi esposo, Luis.</td></tr>
+        </tbody>
+      </table>
+      <div class="ojo"><div class="ojo-title">¡OJO! · fechas al revés</div><p>Spanish writes dates <strong>day / month / year</strong>: <em>12/03/1985</em> is March 12, not December 3. Always confirm: <em>¿El doce de marzo?</em> A wrong birth date can pull up the wrong patient's chart.</p></div>
+    </div>
+
+    <div class="gbox alt2">
+      <h3><span class="num">G3</span>Explicar procedimientos y servicios</h3>
+      <p class="sub">Tell the patient what will happen. Three easy structures, plus words that put steps in order.</p>
+      <div class="three-col">
+        <div class="col-card"><h4>VOY A + INF.</h4><div class="meaning">what I'm going to do</div><div class="ex">Voy a tomarle la presión.</div><div class="ex">Voy a escuchar sus pulmones.</div></div>
+        <div class="col-card gd"><h4>LE VAMOS A + INF.</h4><div class="meaning">what we're going to do to you</div><div class="ex">Le vamos a hacer una radiografía.</div><div class="ex">Le vamos a sacar sangre.</div></div>
+        <div class="col-card sg"><h4>TIENE QUE + INF.</h4><div class="meaning">what the patient has to do</div><div class="ex">Tiene que ayunar.</div><div class="ex">Tiene que firmar aquí.</div></div>
+      </div>
+      <div class="formula"><span>Primero</span><span class="arrow">→</span><span>Después / Luego</span><span class="arrow">→</span><span>Al final</span><span class="res">Primero, la enfermera le toma la presión. Después, la médica lo examina. Al final, va a la farmacia.</span></div>
+      <div class="ex-box">
+        <p><strong>Servicios:</strong> <em>Tenemos intérpretes gratis.</em> (We have free interpreters.) · <em>La farmacia está abierta de 8 a 6.</em> · <em>La consulta dura unos 20 minutos.</em> (The visit lasts about 20 minutes.) · <em>Los resultados llegan en tres días.</em></p>
+      </div>
+    </div>
+
+    <div class="gbox">
+      <h3><span class="num">G4</span>Mandatos para el cuidado del paciente</h3>
+      <p class="sub">Same usted commands as Capítulo 2. With reflexive verbs, the pronoun attaches and needs an accent; in the negative, it moves in front.</p>
+      <table class="conj-table">
+        <thead><tr><th>Infinitivo</th><th>Mandato (usted)</th><th>Negativo</th><th>English</th></tr></thead>
+        <tbody>
+          <tr><td>quitarse</td><td class="accent">Quítese la camisa.</td><td>No se quite…</td><td>Take off your shirt.</td></tr>
+          <tr><td>ponerse</td><td class="accent">Póngase la bata.</td><td>No se ponga…</td><td>Put on the gown.</td></tr>
+          <tr><td>subirse</td><td class="accent">Súbase a la camilla.</td><td>No se suba…</td><td>Get up on the exam table.</td></tr>
+          <tr><td>acostarse</td><td class="accent">Acuéstese boca arriba.</td><td>No se acueste…</td><td>Lie down face up.</td></tr>
+          <tr><td>traer</td><td class="accent">Traiga su tarjeta de seguro.</td><td>No traiga…</td><td>Bring your insurance card.</td></tr>
+          <tr><td>volver</td><td class="accent">Vuelva en dos semanas.</td><td>No vuelva…</td><td>Come back in two weeks.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="gbox alt">
+      <h3><span class="num">G5</span>Direcciones paso a paso</h3>
+      <p class="sub">Directions are usted commands too. Tap 🔊 to hear each one.</p>
+      <table class="conj-table">
+        <thead><tr><th>Español</th><th>English</th><th></th></tr></thead>
+        <tbody>
+          <tr><td class="accent">Siga derecho.</td><td>Go straight.</td><td><button type="button" class="play-btn" onclick="speak('Siga derecho.')">🔊</button></td></tr>
+          <tr><td class="accent">Doble a la derecha / a la izquierda.</td><td>Turn right / left.</td><td><button type="button" class="play-btn" onclick="speak('Doble a la derecha. Doble a la izquierda.')">🔊</button></td></tr>
+          <tr><td class="accent">Suba al segundo piso.</td><td>Go up to the second floor.</td><td><button type="button" class="play-btn" onclick="speak('Suba al segundo piso.')">🔊</button></td></tr>
+          <tr><td class="accent">Baje al primer piso.</td><td>Go down to the first floor.</td><td><button type="button" class="play-btn" onclick="speak('Baje al primer piso.')">🔊</button></td></tr>
+          <tr><td class="accent">Tome el ascensor / las escaleras.</td><td>Take the elevator / the stairs.</td><td><button type="button" class="play-btn" onclick="speak('Tome el ascensor. Tome las escaleras.')">🔊</button></td></tr>
+          <tr><td class="accent">Está al fondo del pasillo.</td><td>It's at the end of the hallway.</td><td><button type="button" class="play-btn" onclick="speak('Está al fondo del pasillo.')">🔊</button></td></tr>
+          <tr><td class="accent">Es la primera puerta a la derecha.</td><td>It's the first door on the right.</td><td><button type="button" class="play-btn" onclick="speak('Es la primera puerta a la derecha.')">🔊</button></td></tr>
+        </tbody>
+      </table>
+      <div class="ojo"><div class="ojo-title">¡OJO! · derecho vs. derecha</div><p><em>Siga <strong>derecho</strong></em> = go <strong>straight</strong>. <em>Doble a la <strong>derecha</strong></em> = turn <strong>right</strong>. One letter changes the whole route. Floors: <em>primer piso, segundo piso, tercer piso</em> (<em>primero</em> and <em>tercero</em> drop the <em>-o</em> before a noun).</p></div>
+    </div>
+
+    <div class="gbox alt2">
+      <h3><span class="num">G6</span>Preposiciones de lugar · con ESTAR</h3>
+      <p class="sub">Location uses <strong>estar</strong>: <em>La farmacia <strong>está</strong> al lado de la recepción.</em> Remember <em>de + el = del</em>.</p>
+      <div class="three-col">
+        <div class="col-card"><h4>AL LADO DE</h4><div class="meaning">next to</div><div class="ex">El laboratorio está al lado de la farmacia.</div></div>
+        <div class="col-card gd"><h4>ENFRENTE DE</h4><div class="meaning">across from / facing</div><div class="ex">La farmacia está enfrente de la recepción.</div></div>
+        <div class="col-card sg"><h4>ENTRE</h4><div class="meaning">between (no "de")</div><div class="ex">La sala de espera está entre la recepción y urgencias.</div></div>
+      </div>
+      <div class="ex-box">
+        <p><strong>Más:</strong> <em>detrás de</em> (behind) · <em>cerca de / lejos de</em> (near / far from) · <em>a la derecha de / a la izquierda de</em> · <em>al fondo de</em> (at the end of) · <em>en el segundo piso</em> (on the second floor).</p>
+        <p><strong>de + el:</strong> <em>al lado <strong>del</strong> laboratorio</em> · <em>enfrente <strong>del</strong> ascensor</em> · but <em>al lado <strong>de la</strong> farmacia</em>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EL MAPA ═══ -->
+  <section class="sec" id="sec-mapa">
+    <h2 class="sec-title">🗺 El mapa · Clínica Comunitaria Esperanza</h2>
+    <p class="sec-sub">explore · follow directions · prepositions · put the route in order</p>
+
+    <div class="card">
+      <div class="card-title">Reto 1 · Explore y siga las direcciones <span class="pill">7 RUTAS</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:10px;"><strong>Explore:</strong> tap any room to see and hear its name. <strong>Reto:</strong> read (or listen to) the directions in the yellow box, then tap the room where the patient ends up. You always start at the <strong>Entrada</strong>, facing up the hallway: <em>a la derecha</em> is your right, <em>a la izquierda</em> is your left.</p>
+      <div class="dir-box">
+        <div class="dir-top"><span id="dirNum">Ruta 1 / 7</span><span>Puntos: <b id="dirScore">0</b></span></div>
+        <div class="dir-text" id="dirText">—</div>
+        <div class="dir-btns"><button type="button" class="play-btn" onclick="speak(DIRS[dirIdx] ? DIRS[dirIdx].t : '')">🔊 Escuchar</button><button type="button" class="play-btn" onclick="startDirs()">↺ Restart</button></div>
+        <div class="game-feedback" id="dirFb"></div>
+      </div>
+      <div class="map-wrap">
+        <div class="map-floor"><div class="map-cap">Primer piso · planta baja</div><div id="floor1"></div></div>
+        <div class="map-floor"><div class="map-cap">Segundo piso</div><div id="floor2"></div></div>
+      </div>
+      <div class="map-label" id="mapLabel"><span class="ml-es">Toque un cuarto</span><span class="ml-en">Tap a room</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Reto 2 · ¿Dónde está? <span class="pill">PREPOSICIONES</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Look at the map and choose the preposition that makes each sentence true.</p>
+      <div id="prepCont"></div>
+      <button class="chk-btn" onclick="checkSelects('prep','rsPrep')">Check Answers</button>
+      <button class="rst-btn" onclick="resetSelects('prep','rsPrep')">Reset</button>
+      <div class="res-msg" id="rsPrep" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Reto 3 · Ordene la ruta <span class="pill">ORDENAR</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:6px;"><strong>De la entrada a la sala de recuperación.</strong> Tap the steps in the correct order. Tap a step in your answer to send it back.</p>
+      <div class="ord" id="ordDir"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Reto 4 · Escriba las direcciones <span class="pill">8 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Complete each direction. Accents are optional.</p>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>siga</span><span>doble</span><span>suba</span><span>baje</span><span>fondo</span><span>ascensor</span><span>enfrente</span><span>lado</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><input class="blk" id="m4_1" data-answer="siga" placeholder="___"> derecho por el pasillo. <span class="ex-hint">(Go straight)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><input class="blk" id="m4_2" data-answer="doble" placeholder="___"> a la derecha en la primera puerta. <span class="ex-hint">(Turn)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text"><input class="blk" id="m4_3" data-answer="suba" placeholder="___"> al segundo piso para radiología. <span class="ex-hint">(Go up)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Después, <input class="blk" id="m4_4" data-answer="baje" placeholder="___"> al primer piso para la farmacia. <span class="ex-hint">(go down)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">El ascensor está al <input class="blk" id="m4_5" data-answer="fondo" placeholder="___"> del pasillo. <span class="ex-hint">(at the end)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Tome el <input class="blk" id="m4_6" data-answer="ascensor|elevador" placeholder="___">. <span class="ex-hint">(elevator)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">La farmacia está <input class="blk" id="m4_7" data-answer="enfrente" placeholder="___"> de la recepción. <span class="ex-hint">(across from)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">El laboratorio está al <input class="blk" id="m4_8" data-answer="lado" placeholder="___"> de la farmacia. <span class="ex-hint">(next to)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('m4_1,m4_2,m4_3,m4_4,m4_5,m4_6,m4_7,m4_8','rsM4')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('m4_1,m4_2,m4_3,m4_4,m4_5,m4_6,m4_7,m4_8','rsM4')">Reset</button>
+      <div class="res-msg" id="rsM4" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ EJERCICIOS ═══ -->
+  <section class="sec" id="sec-ej">
+    <h2 class="sec-title">Ejercicios · Práctica</h2>
+    <p class="sec-sub">Ejercicio 1 · 2 · 3 · 4 · 5 · 6</p>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 1 · Roles y departamentos <span class="pill">8 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Where does the patient go, and who helps? Accents are optional.</p>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>urgencias</span><span>farmacia</span><span>radiología</span><span>recepción</span><span>laboratorio</span><span>médica</span><span>enfermero</span><span>farmacéutico</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Si tiene dolor de pecho muy fuerte, vaya a <input class="blk" id="e1_1" data-answer="urgencias|la sala de urgencias|emergencias" placeholder="___">. <span class="ex-hint">(ER)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Para recoger su medicina, vaya a la <input class="blk" id="e1_2" data-answer="farmacia" placeholder="___">. <span class="ex-hint">(pharmacy)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Para una radiografía, suba a <input class="blk" id="e1_3" data-answer="radiología" placeholder="___">. <span class="ex-hint">(radiology)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Para registrarse, vaya primero a la <input class="blk" id="e1_4" data-answer="recepción" placeholder="___">. <span class="ex-hint">(front desk)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Para un análisis de sangre, vaya al <input class="blk" id="e1_5" data-answer="laboratorio" placeholder="___">. <span class="ex-hint">(lab)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">La <input class="blk" id="e1_6" data-answer="médica|doctora" placeholder="___"> examina a la paciente. <span class="ex-hint">(female doctor)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">El <input class="blk" id="e1_7" data-answer="enfermero" placeholder="___"> le toma la presión. <span class="ex-hint">(male nurse)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">El <input class="blk" id="e1_8" data-answer="farmacéutico" placeholder="___"> le explica la medicina. <span class="ex-hint">(male pharmacist)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e1_1,e1_2,e1_3,e1_4,e1_5,e1_6,e1_7,e1_8','rs1')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e1_1,e1_2,e1_3,e1_4,e1_5,e1_6,e1_7,e1_8','rs1')">Reset</button>
+      <div class="res-msg" id="rs1" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 2 · Preguntas de admisión <span class="pill">6 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Complete each intake question. Use the usted form.</p>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>cuál</span><span>tiene</span><span>toma</span><span>alérgica</span><span>motivo</span><span>quién</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">¿<input class="blk" id="e2_1" data-answer="cuál" placeholder="___"> es su fecha de nacimiento? <span class="ex-hint">(What is…)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">¿<input class="blk" id="e2_2" data-answer="tiene" placeholder="___"> seguro médico? <span class="ex-hint">(Do you have…)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">¿<input class="blk" id="e2_3" data-answer="toma" placeholder="___"> algún medicamento? <span class="ex-hint">(Do you take…)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Señora, ¿es <input class="blk" id="e2_4" data-answer="alérgica" placeholder="___"> a algún medicamento? <span class="ex-hint">(allergic, to a woman)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">¿Cuál es el <input class="blk" id="e2_5" data-answer="motivo" placeholder="___"> de su visita? <span class="ex-hint">(reason)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">¿<input class="blk" id="e2_6" data-answer="quién" placeholder="___"> es su contacto de emergencia? <span class="ex-hint">(Who…)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e2_1,e2_2,e2_3,e2_4,e2_5,e2_6','rs2')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e2_1,e2_2,e2_3,e2_4,e2_5,e2_6','rs2')">Reset</button>
+      <div class="res-msg" id="rs2" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 3 · Mandatos para el cuidado <span class="pill">8 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the usted command of the verb in parentheses. Accents are optional here, but remember them when you write!</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><input class="blk" id="e3_1" data-answer="quítese" placeholder="___"> la camisa, por favor. <span class="ex-hint">(quitarse)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><input class="blk" id="e3_2" data-answer="póngase" placeholder="___"> la bata. <span class="ex-hint">(ponerse)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text"><input class="blk" id="e3_3" data-answer="súbase" placeholder="___"> a la camilla. <span class="ex-hint">(subirse)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text"><input class="blk" id="e3_4" data-answer="acuéstese" placeholder="___"> boca arriba. <span class="ex-hint">(acostarse)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text"><input class="blk" id="e3_5" data-answer="traiga" placeholder="___"> su tarjeta de seguro. <span class="ex-hint">(traer)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text"><input class="blk" id="e3_6" data-answer="vuelva" placeholder="___"> en dos semanas. <span class="ex-hint">(volver)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">No <input class="blk" id="e3_7" data-answer="coma" placeholder="___"> nada antes del análisis. <span class="ex-hint">(comer · negativo)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text"><input class="blk" id="e3_8" data-answer="firme" placeholder="___"> aquí, por favor. <span class="ex-hint">(firmar)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e3_1,e3_2,e3_3,e3_4,e3_5,e3_6,e3_7,e3_8','rs3')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e3_1,e3_2,e3_3,e3_4,e3_5,e3_6,e3_7,e3_8','rs3')">Reset</button>
+      <div class="res-msg" id="rs3" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 4 · Explicar el procedimiento <span class="pill">6 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">A nurse explains today's visit. Complete her explanation.</p>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>tomarle</span><span>hacer</span><span>después</span><span>tiene</span><span>dura</span><span>gratis</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Primero, voy a <input class="blk" id="e4_1" data-answer="tomarle|tomar" placeholder="___"> la presión. <span class="ex-hint">(take [your])</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><input class="blk" id="e4_2" data-answer="después|luego" placeholder="___">, la médica la va a examinar. <span class="ex-hint">(Then / After)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Le vamos a <input class="blk" id="e4_3" data-answer="hacer" placeholder="___"> un análisis de sangre. <span class="ex-hint">(do)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Usted <input class="blk" id="e4_4" data-answer="tiene" placeholder="___"> que ayunar ocho horas. <span class="ex-hint">(has to)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">La consulta <input class="blk" id="e4_5" data-answer="dura" placeholder="___"> unos veinte minutos. <span class="ex-hint">(lasts)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Tenemos intérpretes <input class="blk" id="e4_6" data-answer="gratis" placeholder="___">. <span class="ex-hint">(free)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e4_1,e4_2,e4_3,e4_4,e4_5,e4_6','rs4')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e4_1,e4_2,e4_3,e4_4,e4_5,e4_6','rs4')">Reset</button>
+      <div class="res-msg" id="rs4" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 5 · El formulario de admisión <span class="pill">📖 LEA Y LLENE</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:6px;">Read (or listen to) the check-in conversation. Then fill out Rosa's intake form. Write numbers with digits.</p>
+      <button class="chk-btn" style="margin-top:4px;" onclick="playDialogue()">🔊 Play conversation</button>
+      <button class="rst-btn" onclick="stopSpeech()">■ Stop</button>
+      <div class="dlg" id="dlgBox"></div>
+      <div class="intake">
+        <div class="intake-head">CLÍNICA COMUNITARIA ESPERANZA · Formulario de admisión</div>
+        <div class="intake-grid">
+          <label>Nombre(s)<input class="blk" id="e5_1" data-answer="rosa elena"></label>
+          <label>Apellidos<input class="blk" id="e5_2" data-answer="martínez cruz"></label>
+          <label>Edad<input class="blk" id="e5_3" data-answer="41" data-digits="1" inputmode="numeric"></label>
+          <label>Teléfono<input class="blk" id="e5_4" data-answer="3605550187" data-digits="1" inputmode="numeric"></label>
+          <label>¿Tiene seguro médico? (sí / no)<input class="blk" id="e5_5" data-answer="no"></label>
+          <label>Alergias<input class="blk" id="e5_6" data-answer="penicilina|la penicilina|a la penicilina"></label>
+          <label>Medicamentos<input class="blk" id="e5_7" data-answer="metformina|la metformina"></label>
+          <label>Motivo de la visita (parte del cuerpo)<input class="blk" id="e5_8" data-answer="cabeza|la cabeza|dolor de cabeza"></label>
+          <label>Contacto de emergencia (nombre)<input class="blk" id="e5_9" data-answer="luis"></label>
+          <label>Idioma preferido<input class="blk" id="e5_10" data-answer="español|espanol"></label>
+        </div>
+      </div>
+      <button class="chk-btn" onclick="checkBlanks('e5_1,e5_2,e5_3,e5_4,e5_5,e5_6,e5_7,e5_8,e5_9,e5_10','rs5')">Check the Form</button>
+      <button class="rst-btn" onclick="resetBlanks('e5_1,e5_2,e5_3,e5_4,e5_5,e5_6,e5_7,e5_8,e5_9,e5_10','rs5')">Reset</button>
+      <div class="res-msg" id="rs5" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 6 · Respuesta corta: En la clínica <span class="pill">6 SITUACIONES</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Write what you would say to an adult patient. Use complete sentences.</p>
+      <div id="shortCont"></div>
+      <button class="chk-btn" onclick="checkShort()">Check Answers</button>
+      <button class="rst-btn" onclick="resetShort()">Reset</button>
+      <div class="res-msg" id="rs7" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ LECTURA ═══ -->
+  <section class="sec" id="sec-lec">
+    <h2 class="sec-title">📖 Lectura · Comprensión</h2>
+    <p class="sec-sub">un folleto de la clínica · un artículo sobre la salud latina en EE. UU.</p>
+    <p class="vocab-hint">Words with a dotted underline are <strong>tap-to-translate</strong>: tap one to see its meaning in English. Try to guess from context first! Tap 🔊 to hear a paragraph read aloud.</p>
+
+    <div class="card">
+      <div class="card-title">Lectura 1 · Un folleto <span class="pill">READING</span></div>
+      <div class="flyer">
+        <div class="flyer-head">
+          <div class="flyer-name">Clínica Comunitaria Esperanza</div>
+          <div class="flyer-tag">Salud para toda la familia · <span class="gl" tabindex="0" data-en="We serve">Atendemos</span> en español</div>
+        </div>
+        <div class="flyer-body">
+          <div class="flyer-col">
+            <h4>🕗 Horario <button type="button" class="play-btn mini" onclick="speakEl('fl1')">🔊</button></h4>
+            <p id="fl1">Lunes a viernes: de 8:00 a 6:00.<br>Sábados: de 9:00 a 1:00.<br>Domingos: cerrado.</p>
+            <h4>🩺 Servicios <button type="button" class="play-btn mini" onclick="speakEl('fl2')">🔊</button></h4>
+            <p id="fl2">Medicina familiar · pediatría · farmacia · laboratorio · radiología · <span class="gl" tabindex="0" data-en="vaccines">vacunas</span></p>
+            <h4>💬 Idiomas <button type="button" class="play-btn mini" onclick="speakEl('fl3')">🔊</button></h4>
+            <p id="fl3">Tenemos intérpretes <strong>gratis</strong> en español y en otros idiomas. Usted no tiene que traer a un familiar para interpretar.</p>
+          </div>
+          <div class="flyer-col">
+            <h4>💵 ¿No tiene seguro? <button type="button" class="play-btn mini" onclick="speakEl('fl4')">🔊</button></h4>
+            <p id="fl4">Atendemos a todos los pacientes, con o sin seguro médico. Si no tiene seguro, el precio depende de sus <span class="gl" tabindex="0" data-en="income">ingresos</span>. Pregunte en la recepción por la <span class="gl" tabindex="0" data-en="sliding fee scale">escala de pago</span>.</p>
+            <h4>📋 Para su primera cita, traiga… <button type="button" class="play-btn mini" onclick="speakEl('fl5')">🔊</button></h4>
+            <p id="fl5">una identificación · su tarjeta de seguro (si tiene) · una lista de sus medicamentos.</p>
+            <h4>📍 Cómo llegar <button type="button" class="play-btn mini" onclick="speakEl('fl6')">🔊</button></h4>
+            <p id="fl6">Estamos en la calle Main, número 40, al lado de la biblioteca y enfrente del parque. La farmacia está en el primer piso; radiología está en el segundo piso.</p>
+          </div>
+        </div>
+        <div class="flyer-foot">⚠ Para una emergencia, llame al 911 o vaya a la sala de urgencias del hospital.</div>
+      </div>
+      <p class="real-note">🌎 <strong>Real world:</strong> the clinic is fictional, but its rules are real. Federally funded community health centers in the U.S. must serve patients whether or not they can pay, and they use a sliding fee scale based on income.</p>
+      <div id="l1Cont"></div>
+      <button class="chk-btn" onclick="checkMCset('l1','rsL1')">Score Lectura 1</button>
+      <button class="rst-btn" onclick="resetMCset('l1','rsL1')">Reset</button>
+      <div class="res-msg" id="rsL1" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Lectura 2 · La salud de la comunidad latina en EE. UU. <span class="pill">ARTÍCULO</span></div>
+      <div class="article">
+        <p id="ar1"><button type="button" class="play-btn mini" onclick="speakEl('ar1')">🔊</button> En 2024 <span class="gl" tabindex="0" data-en="lived">vivían</span> en Estados Unidos unos <strong>68 millones de latinos</strong>: casi el 20 % de la <span class="gl" tabindex="0" data-en="population">población</span>, una de cada cinco personas. La mayoría (71 %) habla inglés con <span class="gl" tabindex="0" data-en="fluency">fluidez</span>, pero el 68 % habla español en casa. Para muchos pacientes, el español es el idioma de la familia y de las emociones.</p>
+        <p id="ar2"><button type="button" class="play-btn mini" onclick="speakEl('ar2')">🔊</button> El <span class="gl" tabindex="0" data-en="access">acceso</span> a la salud es un problema. En 2024, el <strong>18.4 %</strong> de los latinos menores de 65 años no tenía seguro médico. Para las personas blancas, la cifra era 6.8 %. Algunas <span class="gl" tabindex="0" data-en="reasons">razones</span>: muchos trabajos no ofrecen seguro, el seguro es caro y las reglas de inmigración limitan quién puede recibir Medicaid.</p>
+        <p id="ar3"><button type="button" class="play-btn mini" onclick="speakEl('ar3')">🔊</button> Algunas <span class="gl" tabindex="0" data-en="diseases">enfermedades</span> son más comunes. Según los CDC, alrededor del <strong>22 %</strong> de los adultos latinos tiene diabetes (diagnosticada o no), comparado con el 12 % de los adultos blancos. Entre las personas de origen mexicano, la cifra es 25 %.</p>
+        <p id="ar4"><button type="button" class="play-btn mini" onclick="speakEl('ar4')">🔊</button> Además, hay pocos médicos latinos: solo el <strong>6 %</strong> de los médicos del país. Por eso, la ley es importante: las clínicas y los hospitales que reciben dinero federal tienen que ofrecer servicios de idioma <strong>gratis</strong>, y no deben usar a un niño como intérprete, <span class="gl" tabindex="0" data-en="except">excepto</span> en una emergencia.</p>
+        <p id="ar5"><button type="button" class="play-btn mini" onclick="speakEl('ar5')">🔊</button> También hay <span class="gl" tabindex="0" data-en="solutions">soluciones</span>. En 2024, los centros de salud comunitarios atendieron a más de <strong>32 millones</strong> de pacientes; casi el 40 % eran latinos. Y en muchas comunidades trabajan los <strong>promotores de salud</strong>: personas de la misma comunidad que ayudan a sus <span class="gl" tabindex="0" data-en="neighbors">vecinos</span> a encontrar servicios y a aprender sobre la salud.</p>
+        <p class="src">Fuentes: Pew Research Center (2025) · KFF (2024 data) · CDC (2019) · AAMC (2019) · 45 CFR § 92.201 · HRSA UDS (2024). Links in the Comunidad tab.</p>
+      </div>
+      <div id="l2Cont"></div>
+      <button class="chk-btn" onclick="checkMCset('l2','rsL2')">Score Lectura 2</button>
+      <button class="rst-btn" onclick="resetMCset('l2','rsL2')">Reset</button>
+      <div class="res-msg" id="rsL2" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ COMUNIDAD ═══ -->
+  <section class="sec" id="sec-com">
+    <h2 class="sec-title">Comunidad · Acceso a la salud</h2>
+    <p class="sec-sub">los datos · sus derechos · promotores de salud · ¿qué haría usted?</p>
+
+    <div class="ch-intro">
+      <div class="label">Real world · Why your Spanish matters</div>
+      <h2>Behind every intake form is a story</h2>
+      <p>The patient who can't find the pharmacy, the mom whose 10-year-old is interpreting, the man who skipped care for years because he had no insurance. These numbers describe the people you'll serve. Read the data, learn the patient's rights, and decide what you would do.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Los datos · Tap a bar to hear it <span class="pill">DATA</span></div>
+      <div class="bars" id="barsCont"></div>
+      <p class="real-note">Uninsured: people under 65, 2024 (KFF). Diabetes: adults, diagnosed or undiagnosed (CDC, 2019). Physicians: share of U.S. doctors who are Hispanic (AAMC, 2019) vs. share of the U.S. population that is Hispanic (Pew, 2024).</p>
+    </div>
+
+    <div class="three-col">
+      <div class="col-card"><h4>TIENE DERECHO</h4><div class="meaning">language access is a right</div><div class="ex">Clinics that receive federal money must offer a qualified interpreter <strong>free of charge</strong>.</div><div class="ex">They may not ask the patient to bring their own interpreter.</div></div>
+      <div class="col-card gd"><h4>NO A LOS NIÑOS</h4><div class="meaning">children are not interpreters</div><div class="ex">A minor child may interpret only in an emergency, when no qualified interpreter is available.</div><div class="ex">Adult family members only if the patient asks for it.</div></div>
+      <div class="col-card sg"><h4>PROMOTORES</h4><div class="meaning">community health workers</div><div class="ex">Trusted people from the community who help neighbors find care, enroll in programs and learn about prevention.</div></div>
+    </div>
+
+    <div class="gbox alt">
+      <h3><span class="num">FRASES</span>Para el acceso al idioma</h3>
+      <p class="sub">What to say when language is the barrier. Tap 🔊.</p>
+      <table class="conj-table">
+        <thead><tr><th>Español</th><th>English</th><th></th></tr></thead>
+        <tbody>
+          <tr><td class="accent">¿En qué idioma prefiere hablar?</td><td>What language do you prefer to speak?</td><td><button type="button" class="play-btn" onclick="speak('¿En qué idioma prefiere hablar?')">🔊</button></td></tr>
+          <tr><td class="accent">Tiene derecho a un intérprete gratis.</td><td>You have the right to a free interpreter.</td><td><button type="button" class="play-btn" onclick="speak('Tiene derecho a un intérprete gratis.')">🔊</button></td></tr>
+          <tr><td class="accent">Un momento, voy a llamar a un intérprete.</td><td>One moment, I'm going to call an interpreter.</td><td><button type="button" class="play-btn" onclick="speak('Un momento, voy a llamar a un intérprete.')">🔊</button></td></tr>
+          <tr><td class="accent">Su hijo no tiene que interpretar.</td><td>Your son doesn't have to interpret.</td><td><button type="button" class="play-btn" onclick="speak('Su hijo no tiene que interpretar.')">🔊</button></td></tr>
+          <tr><td class="accent">Atendemos a pacientes con o sin seguro.</td><td>We see patients with or without insurance.</td><td><button type="button" class="play-btn" onclick="speak('Atendemos a pacientes con o sin seguro.')">🔊</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">¿Qué haría usted? · Mito o realidad <span class="pill">8 PREGUNTAS</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Some questions check the facts; others ask what a good health worker would do. Score them and read every explanation.</p>
+      <div id="comCont"></div>
+      <button class="chk-btn" onclick="checkMCset('com','rsCom')">Score</button>
+      <button class="rst-btn" onclick="resetMCset('com','rsCom')">Reset</button>
+      <div class="res-msg" id="rsCom" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Reflexión · Think and write <span class="pill">2 PREGUNTAS</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:12px;">Write 3 or more sentences for each. You may answer in English, or in Spanish for a challenge. Your teacher reads these in your report.</p>
+      <div class="refl"><label for="ref1">1. Which number in this chapter surprised you most, and why? How could it affect a patient you might see at work?</label><textarea id="ref1" rows="4" placeholder="Escriba aquí…"></textarea></div>
+      <div class="refl"><label for="ref2">2. Why is it a problem when a child interprets for a parent at the doctor's office? Think about the child, the parent and the medical information.</label><textarea id="ref2" rows="4" placeholder="Escriba aquí…"></textarea></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Fuentes · Sources <span class="pill">REAL DATA</span></div>
+      <ul class="src-list">
+        <li><a href="https://www.pewresearch.org/short-reads/2025/10/22/key-facts-about-us-latinos/" target="_blank" rel="noopener">Pew Research Center · Key facts about U.S. Latinos (2025)</a></li>
+        <li><a href="https://www.kff.org/disparities-policy/issue-brief/changes-in-health-coverage-by-race-and-ethnicity-since-the-aca-2010-2018/" target="_blank" rel="noopener">KFF · Health Coverage by Race and Ethnicity, 2010-2024</a></li>
+        <li><a href="https://archive.cdc.gov/www_cdc_gov/media/releases/2019/p1220-diabetes-estimate.html" target="_blank" rel="noopener">CDC · First national estimates on diabetes within Hispanic and Asian populations (2019)</a></li>
+        <li><a href="https://jsri.msu.edu/publications/nexo/vol-xxvi/no-1-fall-2022/latino-patients-where-are-the-latino-doctors" target="_blank" rel="noopener">Julian Samora Research Institute · Latino patients: where are the Latino doctors? (AAMC 2019 data)</a></li>
+        <li><a href="https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-92/subpart-C/section-92.201" target="_blank" rel="noopener">45 CFR § 92.201 · Language assistance services (Section 1557)</a></li>
+        <li><a href="https://data.hrsa.gov/topics/healthcenters/uds/overview/national" target="_blank" rel="noopener">HRSA · Health Center Program national data (2024)</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ JUEGOS ═══ -->
+  <section class="sec" id="sec-ju">
+    <h2 class="sec-title">Juegos · Play &amp; practice</h2>
+    <p class="sec-sub">sort · build · match · quiz · challenge</p>
+
+    <div class="card">
+      <div class="card-title">Juego 1 · ¿Adónde va el paciente? <span class="pill">SORTING</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:12px;">Tap a patient card, then tap the department where that patient should go. Tap a placed card to take it back.</p>
+      <div class="sort-pool" id="sortPool"></div>
+      <div class="sort-bins" id="sortBins"></div>
+      <button class="chk-btn" onclick="checkSort()">Check</button>
+      <button class="rst-btn" onclick="buildSort()">Reset</button>
+      <div class="res-msg" id="rsSort" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 2 · Construya la oración <span class="pill">5 ORACIONES</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:12px;">Tap the words in order to build the Spanish sentence. Tap a word in your sentence to remove it.</p>
+      <div id="buildCont"></div>
+      <button class="chk-btn" onclick="checkBuild()">Check</button>
+      <button class="rst-btn" onclick="resetBuild()">Reset</button>
+      <div class="res-msg" id="rsBuild" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 3 · Emparejamiento: En la clínica <span class="pill">MATCHING</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Click a Spanish word, then its English meaning. Correct pairs turn green.</p>
+      <div id="matchCont"></div>
+      <button class="rst-btn" style="margin-left:0;" onclick="buildMatch()">Shuffle / Reset</button>
+      <div class="res-msg" id="rsMatch" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 4 · Opción múltiple: Capítulo 6 <span class="pill">QUIZ</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Ten questions on roles, intake, procedures, commands and directions.</p>
+      <div id="quizCont"></div>
+      <button class="chk-btn" onclick="checkMCset('quiz','rsQuiz')">Score My Quiz</button>
+      <button class="rst-btn" onclick="resetMCset('quiz','rsQuiz')">Reset</button>
+      <div class="res-msg" id="rsQuiz" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 5 · Reto: mandatos y direcciones <span class="pill">12 ITEMS</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Choose the usted command that matches the arrow or the instruction. Build your streak!</p>
+      <div class="game-wrap" id="gameWrap">
+        <div class="game-scorebar">
+          <div>Puntos<b id="gScore">0</b></div>
+          <div>Racha<b id="gStreak">0</b></div>
+          <div>Pregunta<b id="gNum">1/12</b></div>
+        </div>
+        <div class="game-prompt" id="gPrompt">—</div>
+        <div class="game-sub" id="gSub"></div>
+        <div class="game-opts" id="gOpts"></div>
+        <div class="game-feedback" id="gFb"></div>
+      </div>
+      <button class="rst-btn" style="margin-left:0;" onclick="startGame()">Restart Game</button>
+    </div>
+  </section>
+
+  <!-- ═══ POD · CIRUGÍA ═══ -->
+  <section class="sec" id="sec-pod">
+    <h2 class="sec-title">★ Pod de especialidad · Cirugía</h2>
+    <p class="sec-sub">el quirófano · antes y después de la operación · turismo médico</p>
+
+    <div class="pod-hero">
+      <div class="label">Pod de especialidad · Semana 6</div>
+      <h2>Antes de la operación</h2>
+      <p>The day before surgery, the patient needs three things from you: <strong>clear instructions</strong> (<em>No coma ni beba nada después de la medianoche</em>), a <strong>signed consent</strong> (<em>Firme el consentimiento, por favor</em>) and the chance to <strong>ask questions</strong> (<em>¿Tiene preguntas sobre la operación?</em>). This pod uses this week's commands and procedures, plus the body vocabulary from Capítulo 4.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Vocabulario de cirugía <span class="pill">12 CARDS</span></div>
+      <div class="vocab-grid" id="fcSurg"></div>
+    </div>
+
+    <div class="gbox alt">
+      <h3><span class="num">POD</span>Frases antes y después de la operación</h3>
+      <p class="sub">Tap 🔊 to hear each one.</p>
+      <table class="conj-table">
+        <thead><tr><th>Frase</th><th>English</th><th></th></tr></thead>
+        <tbody>
+          <tr><td class="accent">No coma ni beba nada después de la medianoche.</td><td>Don't eat or drink anything after midnight.</td><td><button type="button" class="play-btn" onclick="speak('No coma ni beba nada después de la medianoche.')">🔊</button></td></tr>
+          <tr><td class="accent">Firme el consentimiento, por favor.</td><td>Sign the consent form, please.</td><td><button type="button" class="play-btn" onclick="speak('Firme el consentimiento, por favor.')">🔊</button></td></tr>
+          <tr><td class="accent">¿Tiene preguntas sobre la operación?</td><td>Do you have questions about the operation?</td><td><button type="button" class="play-btn" onclick="speak('¿Tiene preguntas sobre la operación?')">🔊</button></td></tr>
+          <tr><td class="accent">Va a recibir anestesia general.</td><td>You're going to receive general anesthesia.</td><td><button type="button" class="play-btn" onclick="speak('Va a recibir anestesia general.')">🔊</button></td></tr>
+          <tr><td class="accent">Quítese las joyas, por favor.</td><td>Take off your jewelry, please.</td><td><button type="button" class="play-btn" onclick="speak('Quítese las joyas, por favor.')">🔊</button></td></tr>
+          <tr><td class="accent">Después va a la sala de recuperación.</td><td>Afterward you go to the recovery room.</td><td><button type="button" class="play-btn" onclick="speak('Después va a la sala de recuperación.')">🔊</button></td></tr>
+        </tbody>
+      </table>
+      <div class="ojo"><div class="ojo-title">¡OJO! · ni… ni…</div><p><em>No coma <strong>ni</strong> beba nada</em> = don't eat <strong>or</strong> drink anything. After <em>no</em>, Spanish uses <em>ni</em> (nor) instead of <em>o</em>. Patients often ask <em>¿Ni agua?</em> The answer before general anesthesia is usually <em>Ni agua</em>, unless the surgeon says otherwise.</p></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Diálogo · Mañana es la operación <span class="pill">🔊 ESCUCHE</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:6px;">A surgical nurse prepares Mr. Ramírez for knee surgery. Find every command and every surgery word.</p>
+      <button class="chk-btn" style="margin-top:4px;" onclick="playPodDialogue()">🔊 Play dialogue</button>
+      <button class="rst-btn" onclick="stopSpeech()">■ Stop</button>
+      <div class="dlg" id="dlgPod"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ordene · El día de la operación <span class="pill">ORDENAR</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:6px;">Put Mr. Ramírez's surgery day in order. Tap the steps from first to last.</p>
+      <div class="ord" id="ordSurg"></div>
+    </div>
+
+    <div class="cult-card" style="background:linear-gradient(135deg,#9B2C2C 0%,#7A2020 100%);">
+      <div class="label">En Latinoamérica · Lectura</div>
+      <h3>Turismo médico: operarse en otro país</h3>
+      <p>Cada año, muchos pacientes de Estados Unidos viajan a <strong>México</strong>, <strong>Colombia</strong> y <strong>Costa Rica</strong> para operarse. ¿Por qué? Principalmente por el <span class="gl light" tabindex="0" data-en="price / cost">precio</span>. México es el destino más común, sobre todo para el dentista: muchos pacientes van a Tijuana o a Los Algodones. Según un informe del sector, en Colombia los pacientes pueden <span class="gl light" tabindex="0" data-en="to save">ahorrar</span> por lo menos el 40 %: un reemplazo de cadera puede costar unos 8,000 dólares, frente a unos 40,000 en EE. UU. En Costa Rica, un bypass del corazón puede costar unos 31,500 dólares, frente a 88,000.</p>
+      <p style="margin-top:10px;">Pero hay <span class="gl light" tabindex="0" data-en="risks">riesgos</span>. Los expertos recomiendan hablar primero con su médico, buscar hospitales <span class="gl light" tabindex="0" data-en="accredited">acreditados</span>, pedir una copia de su expediente y planear el <span class="gl light" tabindex="0" data-en="follow-up care">seguimiento</span> al volver a casa. Para usted, eso significa algo práctico: algunos pacientes van a llegar a su clínica después de una operación en otro país, con documentos en español.</p>
+      <div class="fact-pills">
+        <span>México · dental · Tijuana · Los Algodones</span>
+        <span>Colombia · cadera ~$8,000</span>
+        <span>Costa Rica · bypass ~$31,500</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Comprueba · Pod de cirugía <span class="pill">6 PREGUNTAS</span></div>
+      <div id="podCont"></div>
+      <button class="chk-btn" onclick="checkMCset('pod','rsPod')">Score the Pod</button>
+      <button class="rst-btn" onclick="resetMCset('pod','rsPod')">Reset</button>
+      <div class="res-msg" id="rsPod" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    SPSCC · Spanish for Healthcare Workers · Capítulo 6 · At the Doctor's Office &amp; Directions
+  </div>
+
+</div>
+
+<script>
+function switchTab(tab, el){
+  document.querySelectorAll('.tab').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  document.querySelectorAll('.sec').forEach(function(s){ s.classList.remove('active'); });
+  if(el){ el.classList.add('active'); el.setAttribute('aria-selected','true'); }
+  var s = document.getElementById('sec-'+tab); if(s) s.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ── Helpers ── */
+function normalize(s){ if(!s) return ''; return s.toString().trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[¿?¡!.,;:]/g,'').replace(/\s+/g,' ').trim(); }
+function wordsOf(str){ return normalize(str).split(/\s+/).filter(Boolean); }
+function val(id){ var el=document.getElementById(id); return el?(el.value||'').trim():''; }
+function setMsg(id, ok, text){ var m=document.getElementById(id); if(!m) return; m.textContent=text; m.className='res-msg '+(ok?'ok':'ng'); }
+function showFb(id, ok, msg){ var fb=document.getElementById(id); if(!fb) return; fb.className='task-fb show '+(ok?'ok':'ng'); fb.textContent=(ok?'✓ ':'✗ ')+msg; }
+function clearFb(id){ var fb=document.getElementById(id); if(fb) fb.className='task-fb'; }
+function answersOf(el){ return (el.getAttribute('data-answer')||'').split('|'); }
+function isRight(el){ if(el.getAttribute('data-digits')){ var d=(el.value||'').replace(/\D/g,''); return !!d && d===el.getAttribute('data-answer'); } var v=normalize(el.value); return !!v && answersOf(el).some(function(a){ return normalize(a)===v; }); }
+
+/* ── Speech (device Spanish voice) ── */
+var esVoice = null;
+function pickVoice(){
+  if(!('speechSynthesis' in window)) return;
+  var vs = window.speechSynthesis.getVoices(), pref = ['es-MX','es-US','es-419','es-CO','es-ES'];
+  for(var p=0;p<pref.length;p++){ for(var i=0;i<vs.length;i++){ if(vs[i].lang && vs[i].lang.replace('_','-')===pref[p]){ esVoice=vs[i]; return; } } }
+  for(var j=0;j<vs.length;j++){ if(vs[j].lang && vs[j].lang.toLowerCase().indexOf('es')===0){ esVoice=vs[j]; return; } }
+}
+if('speechSynthesis' in window){ pickVoice(); window.speechSynthesis.onvoiceschanged = pickVoice; }
+function utter(text, rate){
+  var u = new SpeechSynthesisUtterance(text.replace(/…/g,''));
+  u.lang = esVoice ? esVoice.lang : 'es-MX'; if(esVoice) u.voice = esVoice; u.rate = rate || 0.9;
+  return u;
+}
+function speak(texts){
+  try{
+    if(!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    (Array.isArray(texts)?texts:[texts]).forEach(function(t){ if(t) window.speechSynthesis.speak(utter(t)); });
+  }catch(e){}
+}
+function stopSpeech(){ try{ window.speechSynthesis.cancel(); }catch(e){} }
+
+/* ── Flashcards ── */
+
+function buildFlash(list, containerId, extraClass){
+  var c = document.getElementById(containerId);
+  list.forEach(function(v){
+    var card = document.createElement('div');
+    card.className = 'vocab-card' + (extraClass ? ' '+extraClass : '');
+    card.setAttribute('role','button');
+    card.setAttribute('tabindex','0');
+    card.setAttribute('aria-label', v.es + '. Flip to see the translation and hear the pronunciation.');
+    card.innerHTML = '<div class="vocab-card-inner"><div class="vocab-front">'+v.es+'<small>'+v.note+'</small><span class="vocab-sound" aria-hidden="true">🔊</span>' +
+      '</div><div class="vocab-back">'+v.en + (v.ex ? '<span class="vocab-ex">'+v.ex+'</span>' : '') +
+      '<button type="button" class="vocab-replay" aria-label="Play again: ' + v.es.replace(/"/g,'&quot;') + '">🔊</button></div></div>';
+    function flip(){ var nowFlipped = card.classList.toggle('flipped'); if(nowFlipped) speak([v.es, v.ex]); }
+    card.addEventListener('click', flip);
+    card.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); flip(); } });
+    card.querySelector('.vocab-replay').addEventListener('click', function(e){ e.stopPropagation(); speak([v.es, v.ex]); });
+    c.appendChild(card);
+  });
+}
+
+
+function checkBlanks(idsCSV, resultId){
+  var ids = idsCSV.split(','), correct = 0, total = ids.length;
+  ids.forEach(function(id){
+    var el = document.getElementById(id); if(!el) return;
+    el.classList.remove('ok','ng');
+    if(isRight(el)){ el.classList.add('ok'); correct++; } else el.classList.add('ng');
+  });
+  var msg = document.getElementById(resultId);
+  if(msg){
+    if(correct===total){ msg.textContent='¡Perfecto! '+correct+' / '+total+' correctas. ✓'; msg.className='res-msg ok'; }
+    else { msg.textContent=correct+' / '+total+' correctas. Revisa las marcadas en rojo.'; msg.className='res-msg ng'; }
+  }
+  updateCompletion();
+}
+function resetBlanks(idsCSV, resultId){
+  idsCSV.split(',').forEach(function(id){ var el=document.getElementById(id); if(el){ el.value=''; el.classList.remove('ok','ng'); } });
+  var msg=document.getElementById(resultId); if(msg){ msg.textContent=''; msg.className='res-msg'; }
+  updateCompletion();
+}
+
+/* ── Multiple-choice engine ── */
+var quizState = {}, MC_SETS = {};
+function buildMC(data, key, containerId){
+  var container = document.getElementById(containerId); if(!container) return;
+  container.innerHTML = '';
+  quizState[key] = data.map(function(){ return null; }); MC_SETS[key] = data;
+  data.forEach(function(item, i){
+    var div = document.createElement('div');
+    div.className = 'quiz-item'; div.id = key+'_item_'+i;
+    var opts = item.options.map(function(opt, j){
+      return '<button type="button" class="quiz-opt" id="'+key+'_'+i+'_'+j+'" onclick="pickMC(\''+key+'\','+i+','+j+')"><span class="letter">'+'ABCD'[j]+'</span><span>'+opt+'</span></button>';
+    }).join('');
+    div.innerHTML = '<div class="quiz-q"><span class="qnum">'+(i+1)+'.</span>'+item.q+'</div><div class="quiz-gloss">'+item.gloss+'</div><div class="quiz-options">'+opts+'</div><div class="quiz-explain" id="'+key+'_exp_'+i+'"></div>';
+    container.appendChild(div);
+  });
+}
+function pickMC(key, i, j){
+  quizState[key][i] = j;
+  MC_SETS[key][i].options.forEach(function(_, k){ document.getElementById(key+'_'+i+'_'+k).classList.toggle('selected', k===j); });
+  updateCompletion();
+}
+function revealMC(key, i){
+  var item = MC_SETS[key][i], chosen = quizState[key][i], ok = chosen===item.answer;
+  item.options.forEach(function(_, j){ var btn=document.getElementById(key+'_'+i+'_'+j); btn.classList.remove('is-correct','is-wrong'); if(j===item.answer) btn.classList.add('is-correct'); else if(j===chosen) btn.classList.add('is-wrong'); });
+  var exp = document.getElementById(key+'_exp_'+i); exp.className='quiz-explain show';
+  exp.innerHTML = '<strong>'+(ok?'✓ ¡Correcto!':'✗ No exactamente.')+'</strong> '+item.explain;
+  document.getElementById(key+'_item_'+i).className='quiz-item '+(ok?'correct':'wrong');
+  return ok;
+}
+function resetMC(key){
+  var data = MC_SETS[key]; quizState[key] = data.map(function(){ return null; });
+  data.forEach(function(item, i){ item.options.forEach(function(_, j){ document.getElementById(key+'_'+i+'_'+j).className='quiz-opt'; }); document.getElementById(key+'_exp_'+i).className='quiz-explain'; document.getElementById(key+'_item_'+i).className='quiz-item'; });
+}
+
+
+var mSelEs = null, mSelEn = null, mMatched = 0, matchDone = false;
+function buildMatch(){
+  var c = document.getElementById('matchCont');
+  var order = matchData.map(function(_, i){ return i; });
+  for(var k=order.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=order[k]; order[k]=order[r]; order[r]=t; }
+  var esHtml = matchData.map(function(m, i){ return '<div class="mi" id="mes-'+i+'" data-idx="'+i+'" onclick="selSpanish(this)">'+(i+1)+'. '+m.es+'</div>'; }).join('');
+  var enHtml = order.map(function(idx){ return '<div class="mi" id="men-'+idx+'" data-idx="'+idx+'" onclick="selEnglish(this)">'+matchData[idx].en+'</div>'; }).join('');
+  c.innerHTML = '<div class="match-cols"><div><div class="match-col-label">Español</div>'+esHtml+'</div><div><div class="match-col-label">English</div>'+enHtml+'</div></div>';
+  mSelEs=null; mSelEn=null; mMatched=0; matchDone=false;
+  document.getElementById('rsMatch').textContent=''; document.getElementById('rsMatch').className='res-msg';
+  updateCompletion();
+}
+function selSpanish(el){ if(el.classList.contains('done')) return; document.querySelectorAll('#matchCont .mi[id^=mes-]').forEach(function(i){ i.classList.remove('sel'); }); el.classList.add('sel'); mSelEs=el; tryMatch(); }
+function selEnglish(el){ if(el.classList.contains('done')) return; document.querySelectorAll('#matchCont .mi[id^=men-]').forEach(function(i){ i.classList.remove('sel','bad'); }); el.classList.add('sel'); mSelEn=el; tryMatch(); }
+function tryMatch(){
+  if(!mSelEs || !mSelEn) return;
+  if(mSelEs.dataset.idx === mSelEn.dataset.idx){
+    mSelEs.classList.remove('sel'); mSelEs.classList.add('done'); mSelEn.classList.remove('sel'); mSelEn.classList.add('done'); mMatched++;
+    if(mMatched===matchData.length){ matchDone=true; setMsg('rsMatch', true, '¡Excelente! Emparejaste las '+mMatched+' frases. ✓'); }
+  } else { var bad=mSelEn; bad.classList.add('bad'); setTimeout(function(){ bad.classList.remove('bad','sel'); }, 700); }
+  mSelEs=null; mSelEn=null; updateCompletion();
+}
+
+
+function buildShort(){
+  var c = document.getElementById('shortCont');
+  c.innerHTML = shortData.map(function(s, i){
+    return '<div style="margin-bottom:14px;"><div style="font-size:0.92rem;font-weight:700;color:var(--navy);">'+(i+1)+'. '+s.q+' <span style="font-weight:400;color:var(--text-hint);font-style:italic;font-size:0.82rem;">'+s.gloss+'</span></div><input class="task-input" id="sa'+i+'" placeholder="Escribe tu respuesta…" autocomplete="off"><div class="task-fb" id="fbsa'+i+'"></div></div>';
+  }).join('');
+}
+function gradeShort(i){
+  var s = shortData[i], v = val('sa'+i), w = wordsOf(v);
+  if(!v) return { ok:false, msg:'Escribe tu respuesta.' };
+  if(w.length < s.minW) return { ok:false, msg:'Escribe una oración completa (mínimo '+s.minW+' palabras).' };
+  var has = function(k){ return w.indexOf(normalize(k)) !== -1; };
+  if(s.all && !s.all.every(has)) return { ok:false, msg:s.hint };
+  if(s.any && !s.any.some(has)) return { ok:false, msg:s.hint };
+  return { ok:true, msg:'¡Bien! Oración completa.' };
+}
+function checkShort(){
+  var correct = 0;
+  shortData.forEach(function(_, i){ var r=gradeShort(i); document.getElementById('sa'+i).style.borderBottomColor = r.ok?'var(--sage)':'var(--terracotta)'; showFb('fbsa'+i, r.ok, r.msg); if(r.ok) correct++; });
+  setMsg('rs7', correct===shortData.length, correct+' / '+shortData.length+' respuestas válidas.');
+  updateCompletion();
+}
+function resetShort(){
+  shortData.forEach(function(_, i){ var el=document.getElementById('sa'+i); el.value=''; el.style.borderBottomColor=''; clearFb('fbsa'+i); });
+  document.getElementById('rs7').className='res-msg'; document.getElementById('rs7').textContent=''; updateCompletion();
+}
+
+
+var gIdx=0, gScore=0, gStreak=0, gFinished=false, gLock=false;
+function startGame(){
+  gIdx=0; gScore=0; gStreak=0; gFinished=false; gLock=false;
+  document.getElementById('gScore').textContent='0'; document.getElementById('gStreak').textContent='0';
+  document.getElementById('gFb').textContent=''; document.getElementById('gFb').className='game-feedback';
+  showGameQ(); updateCompletion();
+}
+function showGameQ(){
+  var q = gameData[gIdx];
+  document.getElementById('gNum').textContent = (gIdx+1)+'/'+gameData.length;
+  document.getElementById('gPrompt').textContent = q.n;
+  document.getElementById('gSub').textContent = 'Choose the usted command.';
+  var opts = q.o.slice();
+  for(var k=opts.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=opts[k]; opts[k]=opts[r]; opts[r]=t; }
+  document.getElementById('gOpts').innerHTML = opts.map(function(o){ return '<button type="button" class="game-opt" onclick="pickGame(this,\''+o.replace(/'/g,"\\'")+'\')">'+o+'</button>'; }).join('');
+  gLock=false;
+}
+function pickGame(el, choice){
+  if(gLock) return; gLock=true;
+  var q = gameData[gIdx], fb = document.getElementById('gFb');
+  var ok = choice === q.a;
+  document.querySelectorAll('#gOpts .game-opt').forEach(function(b){ if(b.textContent===q.a) b.classList.add('is-correct'); });
+  if(ok){ gScore++; gStreak++; fb.textContent='✓ ¡Correcto! '+q.a.charAt(0).toUpperCase()+q.a.slice(1)+'.'; fb.className='game-feedback ok'; speak(q.a); }
+  else { gStreak=0; el.classList.add('is-wrong'); fb.textContent='✗ Correct answer: '+q.a+'.'; fb.className='game-feedback ng'; }
+  document.getElementById('gScore').textContent=gScore; document.getElementById('gStreak').textContent=gStreak;
+  setTimeout(function(){
+    gIdx++;
+    if(gIdx < gameData.length){ showGameQ(); }
+    else { gFinished=true; document.getElementById('gPrompt').innerHTML='<span class="game-done">¡Fin! '+gScore+' / '+gameData.length+'</span>'; document.getElementById('gSub').textContent = gScore===gameData.length?'¡Perfecto! Dominas mandatos y direcciones.':'Pulsa "Restart Game" para intentarlo de nuevo.'; document.getElementById('gOpts').innerHTML=''; document.getElementById('gNum').textContent=gameData.length+'/'+gameData.length; }
+    updateCompletion();
+  }, 950);
+}
+
+
+function escapeHtml(str){ return (str==null?'':String(str)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+function stripTags(html){ var dv=document.createElement('div'); dv.innerHTML=html||''; return (dv.textContent||'').replace(/\s+/g,' ').trim(); }
+function reportTable(title, scoreText, groups){
+  var blocks = groups.map(function(g){
+    var rows = g.items.map(function(it){ return '<tr class="'+(it.value?(it.ok?'ok':'bad'):'blank')+'"><td class="num">'+escapeHtml(it.label)+'</td><td>'+(it.value?escapeHtml(it.value):'<span class="blanktxt">(en blanco)</span>')+'</td><td class="note">'+escapeHtml(it.msg||'')+'</td><td class="mark">'+(it.value?(it.ok?'✓':'✗'):'—')+'</td></tr>'; }).join('');
+    return '<h3>'+escapeHtml(g.heading)+'</h3><table><tbody>'+rows+'</tbody></table>';
+  }).join('');
+  return '<h2>'+escapeHtml(title)+'<span class="score">'+escapeHtml(scoreText)+'</span></h2>'+blocks;
+}
+function collectBlanks(prefix, n, heading){
+  var items=[], correct=0;
+  for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(!el) continue; var v=(el.value||'').trim(); var ok=isRight(el); if(ok) correct++; items.push({ label:String(i), value:v, ok:ok, msg: ok?'Correcto.':'Respuesta: '+answersOf(el).join(' / ') }); }
+  return { heading:heading, items:items, correct:correct, total:items.length };
+}
+function mcReport(data, key){
+  return data.map(function(item, i){ var ch=quizState[key][i]; return { label:String(i+1), value: ch===null?'':stripTags(item.options[ch]), ok: ch===item.answer, msg: ch===item.answer?'Correcto.':'Correcta: '+stripTags(item.options[item.answer]) }; });
+}
+
+/* ═══ Capítulo 6 · data and activities ═══ */
+
+/* ── Vocabulary ── */
+var vocabRoles = [
+  {es:'el médico / la médica', note:'rol · título: doctor/a', en:'doctor / physician', ex:'La médica la va a examinar.'},
+  {es:'el enfermero / la enfermera', note:'rol', en:'nurse', ex:'El enfermero le toma la presión.'},
+  {es:'el / la recepcionista', note:'rol', en:'receptionist', ex:'La recepcionista registra al paciente.'},
+  {es:'el farmacéutico / la farmacéutica', note:'rol', en:'pharmacist', ex:'El farmacéutico le explica la medicina.'},
+  {es:'el / la intérprete', note:'rol', en:'interpreter', ex:'Tenemos intérpretes gratis.'},
+  {es:'la recepción', note:'lugar', en:'front desk / reception', ex:'Primero, vaya a la recepción.'},
+  {es:'la sala de espera', note:'lugar', en:'waiting room', ex:'Siéntese en la sala de espera.'},
+  {es:'el consultorio', note:'lugar', en:'exam room / doctor\'s office', ex:'Pase al consultorio número tres.'},
+  {es:'la farmacia', note:'lugar', en:'pharmacy', ex:'La farmacia está enfrente de la recepción.'},
+  {es:'radiología', note:'departamento', en:'radiology', ex:'Radiología está en el segundo piso.'},
+  {es:'urgencias', note:'también: la sala de emergencias', en:'emergency room', ex:'Si es una emergencia, vaya a urgencias.'},
+  {es:'el laboratorio', note:'lugar', en:'lab', ex:'Vaya al laboratorio para el análisis de sangre.'}
+];
+var vocabIntake = [
+  {es:'el nombre completo', note:'admisión', en:'full name', ex:'¿Cuál es su nombre completo?'},
+  {es:'los apellidos', note:'admisión', en:'last names', ex:'Sus apellidos son Martínez Cruz.'},
+  {es:'la fecha de nacimiento', note:'día / mes / año', en:'date of birth', ex:'¿Cuál es su fecha de nacimiento?'},
+  {es:'la dirección', note:'¡también = direction!', en:'address', ex:'¿Cuál es su dirección?'},
+  {es:'el seguro médico', note:'admisión', en:'health insurance', ex:'¿Tiene seguro médico?'},
+  {es:'la tarjeta de seguro', note:'documento', en:'insurance card', ex:'Traiga su tarjeta de seguro.'},
+  {es:'el motivo de la visita', note:'admisión', en:'reason for the visit', ex:'¿Cuál es el motivo de su visita?'},
+  {es:'alérgico / alérgica', note:'adjetivo', en:'allergic', ex:'¿Es alérgica a algún medicamento?'},
+  {es:'el medicamento', note:'también: la medicina', en:'medication', ex:'¿Toma algún medicamento?'},
+  {es:'el contacto de emergencia', note:'admisión', en:'emergency contact', ex:'¿Quién es su contacto de emergencia?'},
+  {es:'la cita', note:'sustantivo', en:'appointment', ex:'Tengo una cita a las dos.'},
+  {es:'el formulario', note:'documento', en:'form', ex:'Llene este formulario, por favor.'}
+];
+var vocabCare = [
+  {es:'Quítese la camisa', note:'quitarse', en:'Take off your shirt', ex:'Quítese la camisa, por favor.'},
+  {es:'Póngase la bata', note:'ponerse', en:'Put on the gown', ex:'Póngase la bata, abierta atrás.'},
+  {es:'Súbase a la camilla', note:'subirse', en:'Get up on the exam table', ex:'Súbase a la camilla, con cuidado.'},
+  {es:'Acuéstese boca arriba', note:'acostarse', en:'Lie down face up', ex:'Acuéstese boca arriba, por favor.'},
+  {es:'Traiga su tarjeta de seguro', note:'traer', en:'Bring your insurance card', ex:'Para la próxima cita, traiga su tarjeta.'},
+  {es:'Vuelva en dos semanas', note:'volver', en:'Come back in two weeks', ex:'Vuelva en dos semanas para los resultados.'},
+  {es:'Voy a tomarle la presión', note:'voy a + infinitivo', en:'I\'m going to take your blood pressure', ex:'Voy a tomarle la presión. Relájese.'},
+  {es:'Le vamos a hacer una radiografía', note:'le vamos a + inf.', en:'We\'re going to take an X-ray', ex:'Le vamos a hacer una radiografía del pecho.'},
+  {es:'el análisis de sangre', note:'procedimiento', en:'blood test', ex:'Necesita un análisis de sangre.'},
+  {es:'Tiene que ayunar', note:'tener que + inf.', en:'You have to fast', ex:'Tiene que ayunar ocho horas.'},
+  {es:'La consulta dura veinte minutos', note:'servicio', en:'The visit lasts twenty minutes', ex:'La consulta dura unos veinte minutos.'},
+  {es:'los resultados', note:'sustantivo', en:'results', ex:'Los resultados llegan en tres días.'}
+];
+var vocabDir = [
+  {es:'Siga derecho', note:'seguir', en:'Go straight', ex:'Siga derecho por el pasillo.'},
+  {es:'Doble a la derecha', note:'doblar', en:'Turn right', ex:'Doble a la derecha en la primera puerta.'},
+  {es:'Doble a la izquierda', note:'doblar', en:'Turn left', ex:'Doble a la izquierda después de la farmacia.'},
+  {es:'Suba', note:'subir', en:'Go up', ex:'Suba al segundo piso.'},
+  {es:'Baje', note:'bajar', en:'Go down', ex:'Baje al primer piso.'},
+  {es:'al fondo', note:'lugar', en:'at the end / in the back', ex:'El ascensor está al fondo del pasillo.'},
+  {es:'al lado de', note:'preposición', en:'next to', ex:'El laboratorio está al lado de la farmacia.'},
+  {es:'enfrente de', note:'preposición', en:'across from', ex:'La farmacia está enfrente de la recepción.'},
+  {es:'entre', note:'preposición', en:'between', ex:'Está entre la recepción y urgencias.'},
+  {es:'el pasillo', note:'lugar', en:'hallway', ex:'Siga por el pasillo.'},
+  {es:'el ascensor', note:'México: el elevador', en:'elevator', ex:'Tome el ascensor al segundo piso.'},
+  {es:'las escaleras', note:'lugar', en:'stairs', ex:'Las escaleras están al lado del ascensor.'}
+];
+var vocabSurg = [
+  {es:'el quirófano', note:'lugar', en:'operating room', ex:'El quirófano está en el segundo piso.'},
+  {es:'el cirujano / la cirujana', note:'rol', en:'surgeon', ex:'La cirujana va a hacer la operación.'},
+  {es:'la operación', note:'también: la cirugía', en:'operation / surgery', ex:'Su operación es mañana a las ocho.'},
+  {es:'la anestesia general', note:'procedimiento', en:'general anesthesia', ex:'Va a recibir anestesia general.'},
+  {es:'el / la anestesiólogo/a', note:'rol', en:'anesthesiologist', ex:'El anestesiólogo va a hablar con usted.'},
+  {es:'la incisión', note:'procedimiento', en:'incision', ex:'La incisión es pequeña.'},
+  {es:'la sala de recuperación', note:'lugar', en:'recovery room', ex:'Después, va a la sala de recuperación.'},
+  {es:'el consentimiento', note:'documento', en:'consent form', ex:'Firme el consentimiento, por favor.'},
+  {es:'en ayunas', note:'expresión', en:'fasting / on an empty stomach', ex:'Tiene que venir en ayunas.'},
+  {es:'la bata', note:'ropa', en:'hospital gown', ex:'Póngase la bata, por favor.'},
+  {es:'el suero', note:'medicina', en:'IV fluids', ex:'La enfermera le pone el suero.'},
+  {es:'los puntos', note:'después', en:'stitches', ex:'Le quitamos los puntos en diez días.'}
+];
+
+/* ── Clinic map ── */
+var ROOMS = [
+  {id:'recepcion', f:1, es:'la recepción', en:'front desk', x:10, y:280, w:105, h:80, l:['Recepción']},
+  {id:'espera', f:1, es:'la sala de espera', en:'waiting room', x:10, y:180, w:105, h:100, l:['Sala de','espera']},
+  {id:'urgencias', f:1, es:'urgencias', en:'emergency room', x:10, y:40, w:105, h:140, l:['Urgencias']},
+  {id:'farmacia', f:1, es:'la farmacia', en:'pharmacy', x:185, y:280, w:105, h:80, l:['Farmacia']},
+  {id:'laboratorio', f:1, es:'el laboratorio', en:'lab', x:185, y:200, w:105, h:80, l:['Laboratorio']},
+  {id:'banos', f:1, es:'los baños', en:'restrooms', x:185, y:130, w:105, h:70, l:['Baños']},
+  {id:'pagos', f:1, es:'la oficina de pagos', en:'billing office', x:185, y:40, w:105, h:90, l:['Oficina','de pagos']},
+  {id:'ascensor', f:1, es:'el ascensor y las escaleras', en:'elevator and stairs', x:115, y:4, w:70, h:36, l:['Ascensor']},
+  {id:'quirofanos', f:2, es:'los quirófanos', en:'operating rooms (surgery)', x:10, y:4, w:280, h:76, l:['Quirófanos · Cirugía']},
+  {id:'consultorios', f:2, es:'los consultorios', en:'exam rooms', x:10, y:80, w:105, h:180, l:['Consultorios']},
+  {id:'radiologia', f:2, es:'radiología', en:'radiology', x:10, y:260, w:105, h:100, l:['Radiología']},
+  {id:'pediatria', f:2, es:'pediatría', en:'pediatrics', x:185, y:80, w:105, h:180, l:['Pediatría']},
+  {id:'recuperacion', f:2, es:'la sala de recuperación', en:'recovery room', x:185, y:260, w:105, h:100, l:['Sala de','recuperación']}
+];
+function roomById(id){ for(var i=0;i<ROOMS.length;i++){ if(ROOMS[i].id===id) return ROOMS[i]; } return null; }
+function buildMap(){
+  [1,2].forEach(function(f){
+    var hallTop = f===1 ? 40 : 80;
+    var s = '<rect class="hall" x="115" y="'+hallTop+'" width="70" height="'+(360-hallTop)+'"/>';
+    if(f===1){
+      s += '<g class="fixed"><rect x="115" y="360" width="70" height="36" rx="4"/><text x="150" y="382" text-anchor="middle">ENTRADA ▲</text></g>';
+    } else {
+      s += '<g class="fixed"><rect x="115" y="360" width="70" height="36" rx="4"/><text x="150" y="382" text-anchor="middle">ASCENSOR</text></g>';
+      s += '<text class="arrow-t" x="150" y="352" text-anchor="middle">▲ llega</text>';
+    }
+    ROOMS.filter(function(r){ return r.f===f; }).forEach(function(r){
+      var cy = r.y + r.h/2 - (r.l.length-1)*7 + 4;
+      var t = r.l.map(function(line, k){ return '<tspan x="'+(r.x+r.w/2)+'" y="'+(cy+k*14)+'">'+line+'</tspan>'; }).join('');
+      s += '<g class="room" id="room-'+r.id+'" tabindex="0" role="button" aria-label="'+r.es+'" data-id="'+r.id+'"><rect x="'+r.x+'" y="'+r.y+'" width="'+r.w+'" height="'+r.h+'" rx="4"/><text text-anchor="middle">'+t+'</text></g>';
+    });
+    document.getElementById('floor'+f).innerHTML = '<svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa, piso '+f+'">'+s+'</svg>';
+  });
+  document.querySelectorAll('.map-floor .room').forEach(function(g){
+    function go(){ clickRoom(g.getAttribute('data-id')); }
+    g.addEventListener('click', go);
+    g.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } });
+  });
+}
+function clickRoom(id){
+  var r = roomById(id);
+  document.querySelectorAll('.map-floor .room').forEach(function(g){ g.classList.remove('on'); });
+  var g = document.getElementById('room-'+id); if(g) g.classList.add('on');
+  var art = r.es.charAt(0).toUpperCase()+r.es.slice(1);
+  document.getElementById('mapLabel').innerHTML = '<span class="ml-es">'+art+'</span><span class="ml-en">'+r.en+' · piso '+r.f+'</span>';
+  speak(r.es);
+  answerDir(id);
+}
+
+/* Reto 1: follow the directions */
+var DIRS = [
+  {t:'Siga derecho. Es la primera puerta a la izquierda.', a:'recepcion'},
+  {t:'Siga derecho y doble a la derecha en la primera puerta.', a:'farmacia'},
+  {t:'Está a la derecha, entre la farmacia y los baños.', a:'laboratorio'},
+  {t:'Siga derecho. Pase la recepción y la sala de espera. Es la última puerta a la izquierda.', a:'urgencias'},
+  {t:'Siga derecho hasta el fondo del pasillo. Tome el ascensor y suba al segundo piso. Es la primera puerta a la izquierda.', a:'radiologia'},
+  {t:'Suba al segundo piso. Es la primera puerta a la derecha.', a:'recuperacion'},
+  {t:'Suba al segundo piso y siga derecho hasta el fondo del pasillo.', a:'quirofanos'}
+];
+var dirIdx = 0, dirScore = 0, dirAns = [], dirLock = false;
+function startDirs(){
+  dirIdx = 0; dirScore = 0; dirAns = DIRS.map(function(){ return null; }); dirLock = false;
+  document.getElementById('dirScore').textContent = '0';
+  document.getElementById('dirFb').textContent=''; document.getElementById('dirFb').className='game-feedback';
+  showDir(); updateCompletion();
+}
+function showDir(){
+  document.querySelectorAll('.map-floor .room').forEach(function(g){ g.classList.remove('ok','bad'); });
+  if(dirIdx >= DIRS.length){
+    document.getElementById('dirNum').textContent = '¡Fin!';
+    document.getElementById('dirText').textContent = '¡Terminó! '+dirScore+' / '+DIRS.length+' rutas correctas.';
+    return;
+  }
+  document.getElementById('dirNum').textContent = 'Ruta '+(dirIdx+1)+' / '+DIRS.length;
+  document.getElementById('dirText').textContent = DIRS[dirIdx].t;
+}
+function answerDir(id){
+  if(dirLock || dirIdx >= DIRS.length || id==='ascensor') return;
+  dirLock = true;
+  var d = DIRS[dirIdx], ok = id === d.a, fb = document.getElementById('dirFb');
+  dirAns[dirIdx] = id;
+  document.getElementById('room-'+id).classList.add(ok?'ok':'bad');
+  if(ok){ dirScore++; fb.textContent='✓ ¡Correcto! Es '+roomById(id).es+'.'; fb.className='game-feedback ok'; }
+  else { document.getElementById('room-'+d.a).classList.add('ok'); fb.textContent='✗ No. La respuesta es '+roomById(d.a).es+' (en verde).'; fb.className='game-feedback ng'; }
+  document.getElementById('dirScore').textContent = dirScore;
+  updateCompletion();
+  setTimeout(function(){ dirIdx++; dirLock=false; fb.textContent=''; fb.className='game-feedback'; showDir(); updateCompletion(); }, 2200);
+}
+
+/* Reto 2: prepositions (selects) */
+var PREP_OPTS = ['al lado de','enfrente de','entre','al fondo'];
+var SELECT_SETS = {
+  prep: [
+    {pre:'La farmacia está', post:'la recepción.', a:'enfrente de'},
+    {pre:'La sala de espera está', post:'la recepción y urgencias.', a:'entre'},
+    {pre:'El laboratorio está', post:'la farmacia.', a:'al lado de'},
+    {pre:'El ascensor está', post:'del pasillo.', a:'al fondo'},
+    {pre:'Los baños están', post:'el laboratorio y la oficina de pagos.', a:'entre'},
+    {pre:'La recepción está', post:'la sala de espera.', a:'al lado de'},
+    {pre:'En el segundo piso, la sala de recuperación está', post:'radiología.', a:'enfrente de'}
+  ]
+};
+function buildSelects(key, contId, opts){
+  var c = document.getElementById(contId);
+  c.innerHTML = SELECT_SETS[key].map(function(it, i){
+    var o = '<option value="">…</option>' + opts.map(function(x){ return '<option>'+x+'</option>'; }).join('');
+    return '<div class="ex-item"><span class="ex-num">'+(i+1)+'</span><span class="ex-text">'+it.pre+' <select class="sel" id="'+key+'_'+i+'" aria-label="Preposición '+(i+1)+'">'+o+'</select> '+it.post+'</span></div>';
+  }).join('');
+}
+function selCorrect(key){ var c=0; SELECT_SETS[key].forEach(function(it, i){ var el=document.getElementById(key+'_'+i); if(el && el.value===it.a) c++; }); return c; }
+function selFilled(key){ return SELECT_SETS[key].map(function(_, i){ var el=document.getElementById(key+'_'+i); return !!(el && el.value); }); }
+function checkSelects(key, rsId){
+  SELECT_SETS[key].forEach(function(it, i){ var el=document.getElementById(key+'_'+i); el.classList.remove('ok','ng'); el.classList.add(el.value===it.a?'ok':'ng'); });
+  var c = selCorrect(key), t = SELECT_SETS[key].length;
+  setMsg(rsId, c===t, c===t ? '¡Perfecto! '+c+' / '+t+' correctas. ✓' : c+' / '+t+' correctas. Mire el mapa otra vez.');
+  updateCompletion();
+}
+function resetSelects(key, rsId){
+  SELECT_SETS[key].forEach(function(_, i){ var el=document.getElementById(key+'_'+i); el.value=''; el.classList.remove('ok','ng'); });
+  var m=document.getElementById(rsId); m.textContent=''; m.className='res-msg'; updateCompletion();
+}
+
+/* Ordering activities */
+var ORDERS = {
+  ordDir: ['Entre por la puerta principal.','Siga derecho hasta el fondo del pasillo.','Tome el ascensor.','Suba al segundo piso.','Salga del ascensor.','La sala de recuperación es la primera puerta a la derecha.'],
+  ordSurg: ['Llegue al hospital a las seis de la mañana.','Vaya a la recepción y firme el consentimiento.','Quítese la ropa y póngase la bata.','La enfermera le pone el suero.','En el quirófano, recibe la anestesia general.','Después de la operación, descanse en la sala de recuperación.']
+};
+var ordState = {};
+function shuffled(n){ var a=[]; for(var i=0;i<n;i++) a.push(i); do { for(var k=a.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=a[k]; a[k]=a[r]; a[r]=t; } } while(a.every(function(v,i){ return v===i; })); return a; }
+function buildOrder(key){
+  ordState[key] = { pool: shuffled(ORDERS[key].length), ans: [], checked:false, correct:false };
+  renderOrder(key); updateCompletion();
+}
+function renderOrder(key){
+  var st = ordState[key], steps = ORDERS[key], c = document.getElementById(key);
+  var ansH = st.ans.map(function(i, pos){ var cls = st.checked ? (i===pos?' ok':' ng') : ''; return '<button type="button" class="ord-step'+cls+'" onclick="ordBack(\''+key+'\','+i+')">'+steps[i]+'</button>'; }).join('');
+  var poolH = st.pool.map(function(i){ return '<button type="button" class="ord-step" onclick="ordPick(\''+key+'\','+i+')">'+steps[i]+'</button>'; }).join('');
+  c.innerHTML = '<div class="ord-ans">'+ansH+'</div><div class="ord-pool">'+poolH+'</div>'+
+    '<button class="chk-btn" onclick="checkOrder(\''+key+'\')">Check Order</button><button class="rst-btn" onclick="buildOrder(\''+key+'\')">Reset</button><div class="res-msg" id="rs_'+key+'" aria-live="polite"></div>';
+  if(st.checked) setMsg('rs_'+key, st.correct, st.correct ? '¡Perfecto! Todo en orden. ✓' : 'Some steps are out of order (in red). Tap them to send them back and try again.');
+}
+function ordPick(key, i){ var st=ordState[key]; st.pool.splice(st.pool.indexOf(i),1); st.ans.push(i); st.checked=false; renderOrder(key); updateCompletion(); }
+function ordBack(key, i){ var st=ordState[key]; st.ans.splice(st.ans.indexOf(i),1); st.pool.push(i); st.checked=false; renderOrder(key); updateCompletion(); }
+function checkOrder(key){
+  var st = ordState[key];
+  if(st.ans.length < ORDERS[key].length){ setMsg('rs_'+key, false, 'Place all '+ORDERS[key].length+' steps first.'); return; }
+  st.checked = true; st.correct = st.ans.every(function(v, i){ return v===i; });
+  renderOrder(key); updateCompletion();
+}
+
+/* ── Dialogues ── */
+var dialogue = [
+  ['Recepcionista','Buenas tardes. Bienvenida a la Clínica Esperanza. ¿Cuál es su nombre completo?','Good afternoon. Welcome to Clínica Esperanza. What is your full name?'],
+  ['Paciente','Me llamo Rosa Elena Martínez Cruz.','My name is Rosa Elena Martínez Cruz.'],
+  ['Recepcionista','Mucho gusto. ¿Cuántos años tiene?','Nice to meet you. How old are you?'],
+  ['Paciente','Tengo cuarenta y un años.','I\'m forty-one.'],
+  ['Recepcionista','¿Cuál es su número de teléfono?','What is your phone number?'],
+  ['Paciente','Es el tres, seis, cero, cinco, cinco, cinco, cero, uno, ocho, siete.','It\'s 360-555-0187.'],
+  ['Recepcionista','¿Tiene seguro médico?','Do you have health insurance?'],
+  ['Paciente','No, no tengo seguro. ¿Puedo ver a la médica?','No, I don\'t have insurance. Can I see the doctor?'],
+  ['Recepcionista','Sí, claro. Aquí atendemos a todos los pacientes, con o sin seguro. ¿Es alérgica a algún medicamento?','Yes, of course. Here we see all patients, with or without insurance. Are you allergic to any medication?'],
+  ['Paciente','Sí, soy alérgica a la penicilina.','Yes, I\'m allergic to penicillin.'],
+  ['Recepcionista','¿Toma algún medicamento?','Do you take any medication?'],
+  ['Paciente','Sí, tomo metformina para la diabetes.','Yes, I take metformin for diabetes.'],
+  ['Recepcionista','¿Cuál es el motivo de su visita?','What is the reason for your visit?'],
+  ['Paciente','Me duele mucho la cabeza desde hace tres días.','I\'ve had a bad headache for three days.'],
+  ['Recepcionista','¿Quién es su contacto de emergencia?','Who is your emergency contact?'],
+  ['Paciente','Mi esposo, Luis.','My husband, Luis.'],
+  ['Recepcionista','¿Prefiere hablar en español o en inglés con la médica?','Do you prefer to speak in Spanish or in English with the doctor?'],
+  ['Paciente','En español, por favor.','In Spanish, please.'],
+  ['Recepcionista','Muy bien. Tenemos intérpretes gratis. Siéntese en la sala de espera, por favor. Está a la izquierda, al lado de la recepción.','Very good. We have free interpreters. Please sit in the waiting room. It\'s on the left, next to the front desk.']
+];
+var podDialogue = [
+  ['Enfermera','Buenos días, señor Ramírez. Soy la enfermera de cirugía. Mañana es su operación de rodilla.','Good morning, Mr. Ramírez. I\'m the surgical nurse. Tomorrow is your knee operation.'],
+  ['Paciente','Sí. Estoy un poco nervioso.','Yes. I\'m a little nervous.'],
+  ['Enfermera','Es normal. Primero, firme el consentimiento, por favor.','That\'s normal. First, sign the consent form, please.'],
+  ['Paciente','¿Qué es el consentimiento?','What is the consent form?'],
+  ['Enfermera','Es un documento. Dice que usted entiende la operación y que está de acuerdo.','It\'s a document. It says that you understand the operation and that you agree.'],
+  ['Paciente','Muy bien. ¿Y esta noche?','OK. And tonight?'],
+  ['Enfermera','No coma ni beba nada después de la medianoche.','Don\'t eat or drink anything after midnight.'],
+  ['Paciente','¿Ni agua?','Not even water?'],
+  ['Enfermera','Ni agua. Va a recibir anestesia general, y tiene que estar en ayunas.','Not even water. You\'re going to receive general anesthesia, and you have to be fasting.'],
+  ['Paciente','¿Quién va a hacer la operación?','Who is going to do the operation?'],
+  ['Enfermera','La cirujana, la doctora Vega. Ella va a hacer una incisión pequeña.','The surgeon, Dr. Vega. She is going to make a small incision.'],
+  ['Paciente','¿Y después?','And afterward?'],
+  ['Enfermera','Después, va a la sala de recuperación. ¿Tiene preguntas sobre la operación?','Afterward, you go to the recovery room. Do you have questions about the operation?'],
+  ['Paciente','No, gracias. Todo está claro.','No, thank you. Everything is clear.']
+];
+function renderDlg(list, boxId){
+  document.getElementById(boxId).innerHTML = list.map(function(l){
+    return '<p><span class="who'+(l[0]==='Paciente'?' pt':'')+'">'+l[0]+'</span>'+l[1]+'<span class="en">'+l[2]+'</span></p>';
+  }).join('');
+}
+function playDialogue(){ speak(dialogue.map(function(l){ return l[1]; })); }
+function playPodDialogue(){ speak(podDialogue.map(function(l){ return l[1]; })); }
+function speakEl(id){ var el=document.getElementById(id); if(!el) return; speak(el.textContent.replace(/🔊/g,'').replace(/\s+/g,' ').trim()); }
+
+/* ── Tap-to-translate ── */
+document.addEventListener('click', function(e){
+  var g = e.target.closest ? e.target.closest('.gl') : null;
+  document.querySelectorAll('.gl.on').forEach(function(x){ if(x!==g) x.classList.remove('on'); });
+  if(g) g.classList.toggle('on');
+});
+document.addEventListener('keydown', function(e){ if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('gl')){ e.preventDefault(); e.target.click(); } });
+
+/* ── Multiple-choice sets ── */
+var CF = ['Cierto','Falso'], MR = ['Realidad','Mito'];
+var l1Data = [
+  { q:'¿Qué días está abierta la clínica?', gloss:'Which days is the clinic open?', options:['Todos los días','De lunes a sábado','Solo de lunes a viernes','Solo los fines de semana'], answer:1, explain:'Lunes a viernes de 8:00 a 6:00 y sábados de 9:00 a 1:00. Los domingos está cerrada.' },
+  { q:'Un paciente no tiene seguro médico. ¿Qué pasa?', gloss:'A patient has no health insurance. What happens?', options:['No puede ver al médico.','Puede ver al médico; el precio depende de sus ingresos.','Tiene que ir a urgencias.','Tiene que pagar el doble.'], answer:1, explain:'«Atendemos a todos los pacientes, con o sin seguro… el precio depende de sus ingresos.»' },
+  { q:'¿Cuánto cuesta un intérprete?', gloss:'How much does an interpreter cost?', options:['Nada, es gratis.','Depende del idioma.','Lo paga el seguro.','Veinte dólares.'], answer:0, explain:'«Tenemos intérpretes gratis.»' },
+  { q:'¿Qué tiene que traer a su primera cita?', gloss:'What do you have to bring to your first appointment?', options:['A un familiar para interpretar','Una identificación y una lista de sus medicamentos','Una radiografía','Dinero en efectivo'], answer:1, explain:'Una identificación, la tarjeta de seguro (si tiene) y una lista de sus medicamentos. No tiene que traer a un familiar para interpretar.' },
+  { q:'¿Dónde está la clínica?', gloss:'Where is the clinic?', options:['Enfrente de la biblioteca','Al lado del parque','Al lado de la biblioteca y enfrente del parque','Entre el parque y el hospital'], answer:2, explain:'«Al lado de la biblioteca y enfrente del parque.»' },
+  { q:'¿En qué piso está radiología?', gloss:'What floor is radiology on?', options:['En el primer piso','En el segundo piso','Al lado de la farmacia','En el hospital'], answer:1, explain:'«Radiología está en el segundo piso.»' },
+  { q:'Cierto o falso: Para una emergencia, el paciente debe ir a la clínica.', gloss:'True or false: For an emergency, the patient should go to the clinic.', options:CF, answer:1, explain:'Falso. Para una emergencia: llame al 911 o vaya a la sala de urgencias del hospital.' }
+];
+var l2Data = [
+  { q:'¿Cuántos latinos vivían en EE. UU. en 2024?', gloss:'How many Latinos lived in the U.S. in 2024?', options:['unos 20 millones','unos 32 millones','unos 68 millones','unos 100 millones'], answer:2, explain:'Unos 68 millones: casi el 20 % de la población.' },
+  { q:'Cierto o falso: La mayoría de los latinos en EE. UU. no habla inglés.', gloss:'True or false: Most Latinos in the U.S. don\'t speak English.', options:CF, answer:1, explain:'Falso. El 71 % habla inglés con fluidez, pero el 68 % habla español en casa.' },
+  { q:'En 2024, ¿qué porcentaje de los latinos menores de 65 años no tenía seguro médico?', gloss:'In 2024, what percent of Latinos under 65 had no health insurance?', options:['6.8 %','12 %','18.4 %','40 %'], answer:2, explain:'18.4 %, comparado con 6.8 % para las personas blancas.' },
+  { q:'¿Cuál NO es una razón del artículo?', gloss:'Which one is NOT a reason given in the article?', options:['Muchos trabajos no ofrecen seguro.','El seguro es caro.','Las reglas de inmigración limitan Medicaid.','Los latinos no quieren ir al médico.'], answer:3, explain:'El artículo habla de barreras: el trabajo, el costo y las reglas. No dice que los pacientes no quieren ir al médico.' },
+  { q:'Según los CDC, ¿qué porcentaje de los adultos latinos tiene diabetes?', gloss:'According to the CDC, what percent of Latino adults have diabetes?', options:['6 %','12 %','22 %','68 %'], answer:2, explain:'Alrededor del 22 % (diagnosticada o no), y 25 % entre las personas de origen mexicano.' },
+  { q:'Según la ley, una clínica que recibe dinero federal…', gloss:'According to the law, a clinic that receives federal money…', options:['puede cobrar por el intérprete.','tiene que ofrecer servicios de idioma gratis.','debe usar a los hijos del paciente como intérpretes.','solo atiende en inglés.'], answer:1, explain:'Los servicios de idioma son gratis, y no se debe usar a un niño como intérprete, excepto en una emergencia.' },
+  { q:'¿Qué hacen los promotores de salud?', gloss:'What do promotores de salud (community health workers) do?', options:['Hacen operaciones.','Venden medicinas.','Ayudan a sus vecinos a encontrar servicios y a aprender sobre la salud.','Trabajan solo en el hospital.'], answer:2, explain:'Son personas de la misma comunidad que ayudan a sus vecinos.' }
+];
+var comData = [
+  { q:'Una mamá llega con su hijo de 10 años para interpretar. ¿Qué hace usted?', gloss:'A mom arrives with her 10-year-old son to interpret. What do you do?', options:['Le pido al niño que interprete.','Llamo a un intérprete calificado y le digo que es gratis.','Hablo en inglés más despacio.','Le pido que vuelva otro día.'], answer:1, explain:'A child should interpret only in an emergency when no qualified interpreter is available. Say: <em>Tiene derecho a un intérprete gratis. Su hijo no tiene que interpretar.</em>' },
+  { q:'Mito o realidad: La clínica puede pedirle al paciente que pague por su intérprete.', gloss:'Myth or fact: The clinic can ask the patient to pay for the interpreter.', options:MR, answer:1, explain:'Mito. Under federal rules (Section 1557, 45 CFR § 92.201), covered clinics must provide language assistance free of charge, and may not require patients to bring their own interpreter.' },
+  { q:'Mito o realidad: Un latino menor de 65 años tiene casi tres veces más probabilidad de no tener seguro que una persona blanca.', gloss:'Myth or fact: A Latino under 65 is almost three times as likely to be uninsured as a White person.', options:MR, answer:0, explain:'Realidad. 18.4 % vs. 6.8 % in 2024 (KFF), about 2.7 times.' },
+  { q:'Un paciente dice: «No tengo seguro, no puedo pagar.» ¿Qué le dice?', gloss:'A patient says: "I don\'t have insurance, I can\'t pay." What do you tell him?', options:['Lo siento, no podemos atenderlo.','Vaya a urgencias.','Atendemos a pacientes con o sin seguro. Pregunte por la escala de pago.','Llame a su familia.'], answer:2, explain:'Community health centers serve everyone and use a sliding fee scale based on income.' },
+  { q:'Mito o realidad: Casi el 40 % de los pacientes de los centros de salud comunitarios son latinos.', gloss:'Myth or fact: Almost 40 % of community health center patients are Latino.', options:MR, answer:0, explain:'Realidad. In 2024, health centers served about 32.4 million patients, and about 39 % were Hispanic or Latino (HRSA).' },
+  { q:'Mito o realidad: Hay muchos médicos latinos: el 20 % de los médicos son latinos, como la población.', gloss:'Myth or fact: There are many Latino doctors: 20 % of doctors are Latino, like the population.', options:MR, answer:1, explain:'Mito. About 6 % of U.S. physicians are Latino (AAMC, 2019), while Latinos are about 20 % of the population.' },
+  { q:'Una paciente habla bien inglés, pero prefiere hablar de su diagnóstico en español. ¿Qué hace usted?', gloss:'A patient speaks English well but prefers to discuss her diagnosis in Spanish. What do you do?', options:['Le digo que hable en inglés porque lo habla bien.','Respeto su preferencia: «¿En qué idioma prefiere hablar?»','Le pido a su hija que interprete.','Le doy un folleto en inglés.'], answer:1, explain:'Language preference matters, especially for complex or emotional news. Ask and respect it.' },
+  { q:'Un promotor de salud es…', gloss:'A promotor de salud is…', options:['un médico especialista','una persona de la comunidad que ayuda a sus vecinos con la salud','un intérprete del hospital','un tipo de seguro médico'], answer:1, explain:'Promotores are trusted community members who connect neighbors with care and health information.' }
+];
+var quizData = [
+  { q:'«La sala de espera» es…', gloss:'"La sala de espera" is…', options:['the exam room','the waiting room','the recovery room','the pharmacy'], answer:1, explain:'<strong>La sala de espera</strong> = waiting room. Exam room = <em>el consultorio</em>.' },
+  { q:'Para recoger su medicina, el paciente va a…', gloss:'To pick up his medicine, the patient goes to…', options:['la farmacia','radiología','urgencias','la recepción'], answer:0, explain:'Medicine → <strong>la farmacia</strong>.' },
+  { q:'«Doble a la izquierda» significa…', gloss:'"Doble a la izquierda" means…', options:['Go straight.','Turn right.','Turn left.','Go up.'], answer:2, explain:'<em>Doble</em> = turn; <em>izquierda</em> = left.' },
+  { q:'Usted quiere decir: "Go up to the second floor."', gloss:'You want to say "Go up to the second floor."', options:['Baje al segundo piso.','Suba al segundo piso.','Siga al segundo piso.','Doble al segundo piso.'], answer:1, explain:'<em>Subir</em> → <strong>Suba</strong>. <em>Baje</em> = go down.' },
+  { q:'Para preguntar la fecha de nacimiento, usted dice…', gloss:'To ask for the date of birth, you say…', options:['¿Qué es su fecha de nacimiento?','¿Cuál es su fecha de nacimiento?','¿Cuándo es su nacimiento?','¿Dónde es su fecha de nacimiento?'], answer:1, explain:'For information on a form: <strong>¿Cuál es…?</strong>' },
+  { q:'El mandato formal de «ponerse» es…', gloss:'The formal command of "ponerse" is…', options:['Ponga','Póngase','Pónese','Se ponga'], answer:1, explain:'yo <em>pongo</em> → <em>ponga</em> + <em>se</em> → <strong>Póngase</strong>.' },
+  { q:'La farmacia está ___ la recepción. (across from)', gloss:'The pharmacy is across from the front desk.', options:['al lado de','entre','enfrente de','al fondo de'], answer:2, explain:'Across from = <strong>enfrente de</strong>.' },
+  { q:'En un formulario, «la dirección» es…', gloss:'On a form, "la dirección" is…', options:['the direction','the address','the director','the date'], answer:1, explain:'On a form, <strong>la dirección</strong> = address.' },
+  { q:'Usted quiere decir: "I\'m going to take your blood pressure."', gloss:'Explain what you are about to do.', options:['Tome la presión.','Voy a tomarle la presión.','Le duele la presión.','Tiene que tomar la presión.'], answer:1, explain:'<strong>Voy a + infinitivo</strong>: Voy a tomarle la presión.' },
+  { q:'«Siga derecho» significa…', gloss:'"Siga derecho" means…', options:['Turn right.','Go straight.','Sit down.','Go down.'], answer:1, explain:'<em>Derecho</em> = straight; <em>derecha</em> = right.' }
+];
+var podData = [
+  { q:'«El quirófano» es…', gloss:'"El quirófano" is…', options:['the recovery room','the operating room','the surgeon','the waiting room'], answer:1, explain:'<strong>El quirófano</strong> = operating room.' },
+  { q:'«No coma ni beba nada después de la medianoche» significa…', gloss:'This instruction means…', options:['Eat a light dinner before midnight.','Don\'t eat or drink anything after midnight.','Drink only water after midnight.','Don\'t eat anything before noon.'], answer:1, explain:'<em>ni</em> = nor/or after a negative: no eating, no drinking.' },
+  { q:'Antes de la operación, el paciente tiene que firmar…', gloss:'Before the operation, the patient has to sign…', options:['la receta','el consentimiento','la bata','la incisión'], answer:1, explain:'<strong>Firme el consentimiento, por favor.</strong>' },
+  { q:'Después de la operación, el paciente descansa en…', gloss:'After the operation, the patient rests in…', options:['la sala de espera','la sala de recuperación','la farmacia','la recepción'], answer:1, explain:'<strong>La sala de recuperación</strong> = recovery room.' },
+  { q:'Según la lectura, ¿cuál es el destino más común de turismo médico para los pacientes de EE. UU.?', gloss:'According to the reading, what is the most common medical tourism destination for U.S. patients?', options:['Costa Rica','Colombia','México','España'], answer:2, explain:'México, sobre todo para el dentista (Tijuana, Los Algodones).' },
+  { q:'Según la lectura, ¿qué recomiendan los expertos?', gloss:'According to the reading, what do experts recommend?', options:['Viajar sin hablar con su médico','Buscar hospitales acreditados y planear el seguimiento','Operarse en el país más barato','No pedir el expediente'], answer:1, explain:'Hablar con su médico, buscar hospitales acreditados, pedir el expediente y planear el seguimiento.' }
+];
+var MC_KEYS = { l1:l1Data, l2:l2Data, com:comData, quiz:quizData, pod:podData };
+function checkMCset(key, rsId){
+  var data = MC_KEYS[key], correct = 0;
+  data.forEach(function(_, i){ if(revealMC(key, i)) correct++; });
+  setMsg(rsId, correct===data.length, correct+' / '+data.length+' correctas.'+(correct===data.length?' ¡Excelente! ✓':' Lea las explicaciones.'));
+  updateCompletion();
+}
+function resetMCset(key, rsId){ resetMC(key); var m=document.getElementById(rsId); m.className='res-msg'; m.textContent=''; updateCompletion(); }
+function mcCorrect(key){ var c=0; MC_KEYS[key].forEach(function(it, i){ if(quizState[key] && quizState[key][i]===it.answer) c++; }); return c; }
+function mcAnswered(key){ return MC_KEYS[key].map(function(_, i){ return quizState[key] && quizState[key][i]!==null; }); }
+
+/* ── Data bars ── */
+var BARS = [
+  { t:'Sin seguro médico · menores de 65 (2024)', rows:[['Latinos',18.4,'var(--terracotta)','dieciocho punto cuatro por ciento'],['Blancos',6.8,'var(--navy-light)','seis punto ocho por ciento']] },
+  { t:'Diabetes · adultos (diagnosticada o no)', rows:[['Latinos',22,'var(--terracotta)','veintidós por ciento'],['Blancos no latinos',12,'var(--navy-light)','doce por ciento']] },
+  { t:'Latinos: población vs. médicos', rows:[['% de la población',20,'var(--gold)','casi el veinte por ciento de la población'],['% de los médicos',6,'var(--sage)','solo el seis por ciento de los médicos']] }
+];
+function buildBars(){
+  var c = document.getElementById('barsCont');
+  c.innerHTML = BARS.map(function(g, gi){
+    return '<div class="bar-group"><div class="bar-title">'+g.t+'</div>'+g.rows.map(function(r, ri){
+      return '<div class="bar-row" role="button" tabindex="0" onclick="speak(\''+r[0]+': '+r[3]+'\')"><span class="lbl">'+r[0]+'</span><div class="bar-track"><div class="bar-fill" data-w="'+(r[1]/25*100)+'" style="background:'+r[2]+'"></div></div><span class="val">'+r[1]+' %</span></div>';
+    }).join('')+'</div>';
+  }).join('');
+}
+function animateBars(){ document.querySelectorAll('.bar-fill').forEach(function(b){ b.style.width = Math.min(100, +b.getAttribute('data-w'))+'%'; }); }
+
+/* ── Sorting ── */
+var SORT_BINS = ['Recepción','Farmacia','Radiología','Urgencias','Laboratorio','Cirugía'];
+var SORT_ITEMS = [
+  ['Llega para su cita y tiene que registrarse.','Recepción'],
+  ['Tiene que mostrar su tarjeta de seguro.','Recepción'],
+  ['Necesita recoger su medicina.','Farmacia'],
+  ['Quiere preguntar cómo tomar sus pastillas.','Farmacia'],
+  ['Necesita una radiografía del brazo.','Radiología'],
+  ['Le van a hacer una radiografía del pecho.','Radiología'],
+  ['Tiene dolor de pecho muy fuerte y no puede respirar.','Urgencias'],
+  ['Tuvo un accidente de carro y hay mucha sangre.','Urgencias'],
+  ['Necesita un análisis de sangre.','Laboratorio'],
+  ['Tiene que dejar una muestra de orina.','Laboratorio'],
+  ['Mañana tiene una operación de rodilla.','Cirugía'],
+  ['Va a recibir anestesia general.','Cirugía']
+];
+var sortPlace = {}, sortSel = null, sortChecked = false;
+function buildSort(){
+  sortPlace = {}; sortSel = null; sortChecked = false;
+  var order = shuffled(SORT_ITEMS.length);
+  document.getElementById('sortPool').innerHTML = order.map(function(i){ return '<button type="button" class="sort-card" id="sc'+i+'" onclick="pickSort('+i+')">'+SORT_ITEMS[i][0]+'</button>'; }).join('');
+  document.getElementById('sortBins').innerHTML = SORT_BINS.map(function(b, k){ return '<div class="sort-bin" id="sb'+k+'" role="button" tabindex="0" onclick="dropSort('+k+')"><h5>'+b+'</h5></div>'; }).join('');
+  var m=document.getElementById('rsSort'); m.textContent=''; m.className='res-msg';
+  updateCompletion();
+}
+function pickSort(i){
+  var card = document.getElementById('sc'+i);
+  if(sortPlace[i] !== undefined){ // send back to pool
+    delete sortPlace[i]; card.classList.remove('ok','ng','sel'); document.getElementById('sortPool').appendChild(card); sortSel=null; sortChecked=false; updateCompletion(); return;
+  }
+  document.querySelectorAll('.sort-card.sel').forEach(function(c){ c.classList.remove('sel'); });
+  if(sortSel===i){ sortSel=null; return; }
+  sortSel = i; card.classList.add('sel');
+}
+function dropSort(k){
+  if(sortSel===null) return;
+  var card = document.getElementById('sc'+sortSel);
+  card.classList.remove('sel'); sortPlace[sortSel] = k;
+  document.getElementById('sb'+k).appendChild(card); sortSel = null; sortChecked=false; updateCompletion();
+}
+function sortCorrect(){ var c=0; SORT_ITEMS.forEach(function(it, i){ if(sortPlace[i]!==undefined && SORT_BINS[sortPlace[i]]===it[1]) c++; }); return c; }
+function checkSort(){
+  var placed = Object.keys(sortPlace).length;
+  SORT_ITEMS.forEach(function(it, i){ var c=document.getElementById('sc'+i); c.classList.remove('ok','ng'); if(sortPlace[i]!==undefined) c.classList.add(SORT_BINS[sortPlace[i]]===it[1]?'ok':'ng'); });
+  var c = sortCorrect(); sortChecked = true;
+  setMsg('rsSort', c===SORT_ITEMS.length, c+' / '+SORT_ITEMS.length+' correctas.'+(placed<SORT_ITEMS.length?' Place every card.':(c===SORT_ITEMS.length?' ¡Perfecto! ✓':' Tap the red cards to try again.')));
+  updateCompletion();
+}
+
+/* ── Sentence builder ── */
+var BUILD = [
+  { en:'Go straight and turn left.', w:['Siga','derecho','y','doble','a','la','izquierda.'] },
+  { en:'The pharmacy is across from the front desk.', w:['La','farmacia','está','enfrente','de','la','recepción.'] },
+  { en:'Take off your shirt, please.', w:['Quítese','la','camisa,','por','favor.'] },
+  { en:'What is your date of birth?', w:['¿Cuál','es','su','fecha','de','nacimiento?'] },
+  { en:'Don\'t eat or drink anything after midnight.', w:['No','coma','ni','beba','nada','después','de','la','medianoche.'] }
+];
+var bState = [];
+function buildBuild(){
+  bState = BUILD.map(function(b){ return { pool: shuffled(b.w.length), ans: [], res: null }; });
+  renderBuild(); updateCompletion();
+}
+function renderBuild(){
+  document.getElementById('buildCont').innerHTML = BUILD.map(function(b, k){
+    var st = bState[k];
+    var ans = st.ans.map(function(i){ return '<button type="button" class="tile-w" onclick="bBack('+k+','+i+')">'+b.w[i]+'</button>'; }).join('');
+    var pool = st.pool.map(function(i){ return '<button type="button" class="tile-w" onclick="bPick('+k+','+i+')">'+b.w[i]+'</button>'; }).join('');
+    var cls = st.res===null ? '' : (st.res ? ' ok' : ' ng');
+    var fb = st.res===null ? '' : (st.res ? '<div class="bld-fb" style="color:var(--sage)">✓ ¡Correcto!</div>' : '<div class="bld-fb" style="color:var(--terracotta)">✗ Not yet. Check the word order.</div>');
+    return '<div class="bld"><div class="bld-q">'+(k+1)+'. <span>'+b.en+'</span></div><div class="bld-ans'+cls+'">'+ans+'</div><div class="bld-pool">'+pool+'</div>'+fb+'</div>';
+  }).join('');
+}
+function bPick(k, i){ var st=bState[k]; st.pool.splice(st.pool.indexOf(i),1); st.ans.push(i); st.res=null; renderBuild(); updateCompletion(); }
+function bBack(k, i){ var st=bState[k]; st.ans.splice(st.ans.indexOf(i),1); st.pool.push(i); st.res=null; renderBuild(); updateCompletion(); }
+function bOk(k){ var b=BUILD[k], st=bState[k]; return st.ans.length===b.w.length && st.ans.map(function(i){ return b.w[i]; }).join(' ')===b.w.join(' '); }
+function checkBuild(){
+  var c=0; bState.forEach(function(st, k){ st.res = bOk(k); if(st.res) c++; });
+  renderBuild(); setMsg('rsBuild', c===BUILD.length, c+' / '+BUILD.length+' oraciones correctas.'+(c===BUILD.length?' ✓':'')); updateCompletion();
+}
+function resetBuild(){ buildBuild(); var m=document.getElementById('rsBuild'); m.textContent=''; m.className='res-msg'; }
+function buildCorrect(){ var c=0; BUILD.forEach(function(_, k){ if(bOk(k)) c++; }); return c; }
+
+/* ── Matching, short answer, game data ── */
+var matchData = [
+  {es:'la recepción', en:'front desk'},
+  {es:'la sala de espera', en:'waiting room'},
+  {es:'el consultorio', en:'exam room'},
+  {es:'el pasillo', en:'hallway'},
+  {es:'el ascensor', en:'elevator'},
+  {es:'las escaleras', en:'stairs'},
+  {es:'el seguro médico', en:'health insurance'},
+  {es:'la cita', en:'appointment'},
+  {es:'la fecha de nacimiento', en:'date of birth'},
+  {es:'el medicamento', en:'medication'}
+];
+var shortData = [
+  { q:'Pregúntele al paciente su fecha de nacimiento.', gloss:'Ask the patient for his date of birth.', all:['cual','es','fecha','nacimiento'], minW:4, hint:'Usa «¿Cuál es su fecha de nacimiento?».' },
+  { q:'Dígale que se ponga la bata.', gloss:'Tell him to put on the gown.', all:['pongase','bata'], minW:3, hint:'Usa «Póngase la bata, por favor».' },
+  { q:'Explíquele cómo llegar a la farmacia: siga derecho y doble a la derecha.', gloss:'Explain how to get to the pharmacy: go straight and turn right.', all:['siga','derecho','doble','derecha'], minW:6, hint:'Usa «Siga derecho y doble a la derecha».' },
+  { q:'Dígale que la farmacia está enfrente de la recepción.', gloss:'Tell him the pharmacy is across from the front desk.', all:['farmacia','esta','enfrente','recepcion'], minW:6, hint:'Usa «La farmacia está enfrente de la recepción».' },
+  { q:'Explíquele que va a tomarle la presión.', gloss:'Explain that you are going to take his blood pressure.', all:['voy','presion'], any:['tomarle','tomar'], minW:4, hint:'Usa «Voy a tomarle la presión».' },
+  { q:'Dígale que tiene derecho a un intérprete gratis.', gloss:'Tell him he has the right to a free interpreter.', all:['interprete','gratis'], any:['derecho','tiene'], minW:4, hint:'Usa «Tiene derecho a un intérprete gratis».' }
+];
+var gameData = [
+  {n:'⬆  go straight', a:'Siga derecho', o:['Siga derecho','Doble a la derecha','Suba']},
+  {n:'➡  turn right', a:'Doble a la derecha', o:['Doble a la izquierda','Doble a la derecha','Siga derecho']},
+  {n:'⬅  turn left', a:'Doble a la izquierda', o:['Doble a la izquierda','Doble a la derecha','Baje']},
+  {n:'⤴  go up a floor', a:'Suba', o:['Baje','Suba','Siga']},
+  {n:'⤵  go down a floor', a:'Baje', o:['Baje','Suba','Doble']},
+  {n:'quitarse · la camisa', a:'Quítese', o:['Quítese','Quítase','Se quite']},
+  {n:'ponerse · la bata', a:'Póngase', o:['Pónese','Póngase','Ponga']},
+  {n:'subirse · a la camilla', a:'Súbase', o:['Súbese','Súbase','Sube']},
+  {n:'traer · su tarjeta', a:'Traiga', o:['Trae','Traiga','Traga']},
+  {n:'volver · en dos semanas', a:'Vuelva', o:['Vuelve','Volva','Vuelva']},
+  {n:'firmar · el consentimiento', a:'Firme', o:['Firma','Firme','Firmo']},
+  {n:'no comer · nada', a:'No coma', o:['No come','No coma','No comas']}
+];
+
+/* ── Completion ── */
+var BLANK_SETS = [['m4_',8],['e1_',8],['e2_',6],['e3_',8],['e4_',6],['e5_',10]];
+var BLANK_HEADS = ['Mapa · Reto 4: Escriba las direcciones','Ej 1 · Roles y departamentos','Ej 2 · Preguntas de admisión','Ej 3 · Mandatos para el cuidado','Ej 4 · Explicar el procedimiento','Ej 5 · Formulario de admisión'];
+function idsFilled(prefix, n){ var out=[]; for(var i=1;i<=n;i++) out.push(val(prefix+i).length>0); return out; }
+function blankFilled(prefix){ for(var k=0;k<BLANK_SETS.length;k++){ if(BLANK_SETS[k][0]===prefix) return idsFilled(prefix, BLANK_SETS[k][1]); } return []; }
+var completionGroups = [
+  { label:'Nombre', tab:'ov', items:function(){ return [val('studentName').length>0]; } },
+  { label:'Mapa', tab:'mapa', items:function(){ return dirAns.map(function(a){ return a!==null; }).concat(selFilled('prep'), [!!(ordState.ordDir && ordState.ordDir.checked)], blankFilled('m4_')); } },
+  { label:'Ejercicios', tab:'ej', items:function(){ var a=[]; ['e1_','e2_','e3_','e4_','e5_'].forEach(function(p){ a=a.concat(blankFilled(p)); }); return a.concat(shortData.map(function(_, i){ return val('sa'+i).length>0; })); } },
+  { label:'Lectura', tab:'lec', items:function(){ return mcAnswered('l1').concat(mcAnswered('l2')); } },
+  { label:'Comunidad', tab:'com', items:function(){ return mcAnswered('com').concat([val('ref1').length>20, val('ref2').length>20]); } },
+  { label:'Juegos', tab:'ju', items:function(){ return [Object.keys(sortPlace).length===SORT_ITEMS.length].concat(bState.map(function(st){ return st.ans.length>0; }), [matchDone], mcAnswered('quiz'), [gFinished]); } },
+  { label:'Pod', tab:'pod', items:function(){ return [!!(ordState.ordSurg && ordState.ordSurg.checked)].concat(mcAnswered('pod')); } }
+];
+function completionStats(){ return completionGroups.map(function(g){ var a=g.items(); return { label:g.label, tab:g.tab, done:a.filter(Boolean).length, total:a.length }; }); }
+
+/* ── Live score ── */
+function blanksCorrect(prefix, n){ var c=0; for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(el && isRight(el)) c++; } return c; }
+function ordOk(key){ var st=ordState[key]; return !!(st && st.ans.length===ORDERS[key].length && st.ans.every(function(v,i){ return v===i; })); }
+function computeScore(){
+  var correct=0, total=0;
+  BLANK_SETS.forEach(function(b){ correct+=blanksCorrect(b[0],b[1]); total+=b[1]; });
+  shortData.forEach(function(_, i){ if(val('sa'+i) && gradeShort(i).ok) correct++; }); total += shortData.length;
+  correct += dirScore; total += DIRS.length;
+  correct += selCorrect('prep'); total += SELECT_SETS.prep.length;
+  correct += (ordOk('ordDir')?1:0) + (ordOk('ordSurg')?1:0); total += 2;
+  ['l1','l2','com','quiz','pod'].forEach(function(k){ correct += mcCorrect(k); total += MC_KEYS[k].length; });
+  correct += mMatched; total += matchData.length;
+  correct += sortCorrect(); total += SORT_ITEMS.length;
+  correct += buildCorrect(); total += BUILD.length;
+  correct += gScore; total += gameData.length;
+  return { correct:correct, total:total };
+}
+function updateScore(){ var s=computeScore(); var pct=s.total?Math.round(s.correct/s.total*100):0; var el=document.getElementById('completionScore'); if(el) el.textContent='★ '+pct+'% correcto'; }
+function updateCompletion(){
+  if(!quizState['pod'] || !bState.length || !ordState.ordSurg) return;
+  var stats = completionStats(), d=0, t=0;
+  stats.forEach(function(g){ d+=g.done; t+=g.total; });
+  var pct = t ? Math.round(d/t*100) : 0;
+  document.getElementById('completionPct').textContent = pct+'%';
+  document.getElementById('pf').style.width = pct+'%';
+  document.getElementById('completionLegend').innerHTML = stats.map(function(g){ return '<button type="button" class="legend-pill '+(g.done===g.total?'done':'')+'" onclick="jumpTab(\''+g.tab+'\')">'+g.label+' '+g.done+'/'+g.total+'</button>'; }).join('');
+  updateScore();
+}
+function jumpTab(tab){ var btns=document.querySelectorAll('.tab'); for(var i=0;i<btns.length;i++){ if((btns[i].getAttribute('onclick')||'').indexOf("'"+tab+"'")!==-1){ switchTab(tab, btns[i]); return; } } switchTab(tab, null); }
+document.addEventListener('input', updateCompletion);
+document.addEventListener('change', updateCompletion);
+
+/* ── Student report ── */
+function buildReportHtml(name){
+  var stamp = new Date().toLocaleString('en-US',{ year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' });
+  var s = computeScore(), scorePct = s.total ? Math.round(s.correct/s.total*100) : 0;
+  var stats = completionStats(), cd=0, ct=0; stats.forEach(function(g){ cd+=g.done; ct+=g.total; });
+  var cpct = ct?Math.round(cd/ct*100):0;
+  var compRows = stats.map(function(g){ return '<li class="'+(g.done===g.total?'checked':'')+'">'+(g.done===g.total?'☑':'☐')+' '+escapeHtml(g.label)+': '+g.done+' / '+g.total+'</li>'; }).join('');
+  var blanks = BLANK_SETS.map(function(b, k){ return collectBlanks(b[0], b[1], BLANK_HEADS[k]); });
+  var bc=0, bt=0; blanks.forEach(function(g){ bc+=g.correct; bt+=g.total; });
+  var saItems = shortData.map(function(x, i){ var v=val('sa'+i), r=gradeShort(i); return { label:x.q, value:v, ok:r.ok, msg:r.msg }; });
+  var dirItems = DIRS.map(function(d, i){ var a=dirAns[i]; return { label:'Ruta '+(i+1), value: a?roomById(a).es:'', ok: a===d.a, msg: a===d.a?'Correcto.':'Respuesta: '+roomById(d.a).es }; });
+  var prepItems = SELECT_SETS.prep.map(function(it, i){ var v=document.getElementById('prep_'+i).value; return { label:it.pre+' ___ '+it.post, value:v, ok:v===it.a, msg: v===it.a?'Correcto.':'Respuesta: '+it.a }; });
+  var ordItems = [['ordDir','Ordene la ruta'],['ordSurg','El día de la operación']].map(function(o){ var st=ordState[o[0]]; return { label:o[1], value: st && st.checked ? (ordOk(o[0])?'En orden':'Fuera de orden') : '', ok: ordOk(o[0]), msg: ordOk(o[0])?'Correcto.':'Sin terminar o con errores.' }; });
+  var games = [
+    { label:'¿Adónde va el paciente?', value: Object.keys(sortPlace).length ? sortCorrect()+' / '+SORT_ITEMS.length : '', ok: sortCorrect()===SORT_ITEMS.length, msg:'' },
+    { label:'Construya la oración', value: bState.some(function(st){ return st.ans.length; }) ? buildCorrect()+' / '+BUILD.length : '', ok: buildCorrect()===BUILD.length, msg:'' },
+    { label:'Emparejamiento', value: mMatched ? mMatched+' / '+matchData.length : '', ok: matchDone, msg:'' },
+    { label:'Reto: mandatos y direcciones', value: gFinished ? gScore+' / '+gameData.length : '', ok: gFinished && gScore>=10, msg:'' }
+  ];
+  var refl = [['ref1','Reflexión 1'],['ref2','Reflexión 2']].map(function(r){ var v=val(r[0]); return { label:r[1], value:v, ok: v.length>20, msg: v.length>20?'Para leer: maestro/a.':'Sin terminar.' }; });
+  function mcBlock(key, title, head){ var items = mcReport(MC_KEYS[key], key); return reportTable(title, mcCorrect(key)+' / '+items.length+' correctas', [{ heading:head, items:items }]); }
+
+  return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Reporte Capítulo 6 · '+escapeHtml(name)+'</title><style>'+
+  "body{font-family:Georgia,'Times New Roman',serif;color:#2A2118;max-width:850px;margin:0 auto;padding:40px 32px;line-height:1.6;}"+
+  'header{border-bottom:4px solid #C45D3A;padding-bottom:16px;margin-bottom:28px;} h1{font-size:1.6rem;color:#1B2A4A;margin:0 0 6px;}'+
+  ".meta{font-family:'Courier New',monospace;font-size:0.78rem;color:#6B5D4A;} .meta strong{color:#1B2A4A;}"+
+  '.summary{background:#FBF5EA;border-left:5px solid #D4A24C;padding:14px 18px;margin-bottom:28px;font-size:0.95rem;}'+
+  'h2{font-size:1.1rem;color:#1B2A4A;margin:32px 0 10px;border-left:5px solid #C45D3A;padding-left:12px;}'+
+  "h3{font-size:0.78rem;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:0.06em;color:#6B5D4A;margin:18px 0 6px;font-weight:normal;}"+
+  ".score{font-family:'Courier New',monospace;font-size:0.72rem;font-weight:normal;color:#6B5D4A;display:block;padding-top:2px;}"+
+  'table{width:100%;border-collapse:collapse;font-size:0.86rem;margin-bottom:8px;} td{padding:8px 10px;border-bottom:1px solid #EDE2CE;vertical-align:top;}'+
+  "td.num{color:#6B5D4A;font-family:'Courier New',monospace;font-size:0.75rem;} td.note{font-size:0.78rem;color:#6B5D4A;font-style:italic;} td.mark{text-align:center;font-weight:bold;width:26px;}"+
+  'tr.ok{background:#F2F8EE;} tr.ok td.mark{color:#4C7A3C;} tr.bad{background:#FCF0EE;} tr.bad td.mark{color:#A8452A;}'+
+  '.blanktxt{color:#A89A88;} ul.check{list-style:none;padding:0;font-size:0.9rem;} ul.check li{padding:5px 0;border-bottom:1px solid #F2EADB;} ul.check li.checked{color:#4C7A3C;}'+
+  "footer{margin-top:40px;border-top:1px solid #EDE2CE;padding-top:12px;font-family:'Courier New',monospace;font-size:0.68rem;color:#6B5D4A;}"+
+  '@media print{body{padding:0;}h2{page-break-after:avoid;}table{page-break-inside:avoid;}}</style></head><body>'+
+  '<header><h1>Spanish for Healthcare Workers · Capítulo 6</h1><p class="meta"><strong>Estudiante:</strong> '+escapeHtml(name)+' &nbsp;·&nbsp; <strong>En el consultorio</strong> &nbsp;·&nbsp; Generado: '+escapeHtml(stamp)+'</p></header>'+
+  '<div class="summary"><strong>Puntuación:</strong> '+s.correct+' / '+s.total+' correctas (<strong>'+scorePct+'%</strong>) · Página completada al <strong>'+cpct+'%</strong> ('+cd+' / '+ct+' elementos)</div>'+
+  '<h2>Progreso por sección</h2><ul class="check">'+compRows+'</ul>'+
+  reportTable('El mapa', dirScore+' / '+DIRS.length+' rutas · '+selCorrect('prep')+' / '+SELECT_SETS.prep.length+' preposiciones', [{ heading:'Reto 1 · Siga las direcciones', items:dirItems }, { heading:'Reto 2 · ¿Dónde está?', items:prepItems }])+
+  reportTable('Ejercicios (fill-in)', bc+' / '+bt+' correctas', blanks)+
+  reportTable('Ejercicio 6 · Respuesta corta', saItems.filter(function(x){ return x.ok; }).length+' / '+saItems.length+' válidas', [{ heading:'En la clínica', items:saItems }])+
+  mcBlock('l1','Lectura 1 · El folleto','Comprensión')+
+  mcBlock('l2','Lectura 2 · La salud latina','Comprensión')+
+  mcBlock('com','Comunidad · ¿Qué haría usted?','Mito o realidad')+
+  reportTable('Comunidad · Reflexión', '', [{ heading:'Respuestas escritas', items:refl }])+
+  reportTable('Juegos', '', [{ heading:'Actividades', items:games }])+
+  mcBlock('quiz','Juego 4 · Opción múltiple','Quiz')+
+  reportTable('Actividades de orden', '', [{ heading:'Ordenar', items:ordItems }])+
+  mcBlock('pod','★ Pod de especialidad · Cirugía','Comprueba')+
+  '<footer>South Puget Sound Community College · Spanish for Healthcare Workers · Capítulo 6 · Para entregar como PDF, abre este archivo e imprime → Guardar como PDF.</footer></body></html>';
+}
+function downloadReport(){
+  var field=document.getElementById('studentName'), name=(field.value||'').trim();
+  if(!name){ field.focus(); field.style.borderColor='#A8452A'; alert('Escribe tu nombre primero. / Please enter your name before downloading the report.'); setTimeout(function(){ field.style.borderColor=''; },2500); return; }
+  var html=buildReportHtml(name); var safe=name.replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'')||'estudiante';
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'}); var url=URL.createObjectURL(blob);
+  var a=document.createElement('a'); a.href=url; a.download='Capitulo6_SpanishHealthcare_'+safe+'.html'; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); },1000);
+}
+
+/* animate bars when the Comunidad tab opens */
+var _switchTab = switchTab;
+switchTab = function(tab, el){ _switchTab(tab, el); if(tab==='com') setTimeout(animateBars, 120); };
+
+/* ── Build everything ── */
+buildFlash(vocabRoles, 'fcRoles', '');
+buildFlash(vocabIntake, 'fcIntake', 'conn-card');
+buildFlash(vocabCare, 'fcCare', '');
+buildFlash(vocabDir, 'fcDir', 'conn-card');
+buildFlash(vocabSurg, 'fcSurg', 'pod-card');
+buildMap();
+startDirs();
+buildSelects('prep', 'prepCont', PREP_OPTS);
+renderDlg(dialogue, 'dlgBox');
+renderDlg(podDialogue, 'dlgPod');
+buildMC(l1Data, 'l1', 'l1Cont');
+buildMC(l2Data, 'l2', 'l2Cont');
+buildMC(comData, 'com', 'comCont');
+buildMC(quizData, 'quiz', 'quizCont');
+buildMC(podData, 'pod', 'podCont');
+buildBars();
+buildSort();
+buildBuild();
+buildMatch();
+buildShort();
+startGame();
+buildOrder('ordDir');
+buildOrder('ordSurg');
+updateCompletion();
+</script>
+
+</body>
+</html>
